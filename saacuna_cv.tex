@@ -1,0 +1,491 @@
+%---------------------------------------------------------------------------------------------------
+%
+%	Author: Samuel Acuña
+%   Description: Curriculum Vitae
+%
+
+%---------------------------------------------------------------------------------------------------
+%   DOCUMENT DEFINITION
+% 
+% we use article class because we want to fully customize the page and dont use a cv template
+\documentclass[letterpaper, 10pt]{article}
+
+%---------------------------------------------------------------------------------------------------
+%   PACKAGES
+%
+
+%\usepackage[utf8]{inputenc} % Required for inputting international characters
+%\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref} % hyperlinks
+
+\usepackage[top=1in, bottom=1in, left=0.5in, right=0.5in]{geometry}   % set margins
+
+\usepackage{datetime} % to create custom date formatting
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR} % new date format: month year
+
+\usepackage{lastpage} % Required for calculating the number of pages in the document
+
+\usepackage{fancyhdr}   % to create custom headers
+\pagestyle{fancy}   % use fancy header
+\fancyhead[R]{\small \textsl{Updated: \monthyeardate\today}} % right header
+\renewcommand{\headrulewidth}{0pt} % remove top header line
+\headsep = 0.5cm %5pt % less space between header and content
+\fancyfoot[C]{} % clear default page number
+\fancyfoot[R]{\small \textsl{Acuña SA, CV Page \thepage\ of \pageref{LastPage}}} % right footer
+%\usepackage{showframe} % for debugging the page, to show outer frames
+
+\setlength{\parindent}{0in} % paragraph indentation is zero
+
+\setcounter{secnumdepth}{0} % suppress section numbering
+
+\usepackage{enumitem} % to adjust lists formatting
+\setlist[itemize]{noitemsep} % reduce spacing for itemized lists
+
+\usepackage{color} % Required for custom colors
+\definecolor{slateblue}{rgb}{0.17,0.22,0.34}
+\definecolor{darkblue}{RGB}{61, 90, 128}
+\definecolor{darkerblue}{RGB}{51, 80, 118}
+% \definecolor{gray}{RGB}{110,110,110} % gray
+% \definecolor{lightgray}{RGB}{225,225,225} %light gray
+
+\usepackage{sectsty} % Allows customization of titles
+\sectionfont{\color{darkblue}} % Color section titles
+
+\usepackage{fontspec} % Required for specification of custom fonts
+%\setmainfont{Tahoma}
+\setmainfont{Optima}
+
+
+
+%---------------------------------------------------------------------------------------------------
+% BEGIN DOCUMENT
+%
+\begin{document}
+
+%---------------------------------------------------------------------------------------------------
+% TITLE and contact info
+% 
+
+{\Huge \color{darkerblue} \textbf{Samuel A. Acuña, Ph.D.}}
+%{\Huge \textsc{Samuel A. Acuña, Ph.D.}}
+{\small \hspace{8pt}  (he/him, \href{https://namedrop.io/samuelacuna}{pronounce})}
+
+\bigskip
+
+Department of Bioengineering
+\\Center for Adaptive Systems of Brain-Body Interactions
+\\George Mason University
+
+\medskip
+
+\begin{tabbing}{l l}
+     \hspace{1cm} \= \hspace{10cm} \kill % Spacing within the block
+     Office: \> Peterson Family Health Sciences Hall, Room 3100A \\
+     \> 4400 University Drive, Fairfax, VA 22030\\[6pt]
+     Email: \> \href{mailto:sacuna2@gmu.edu}{sacuna2@gmu.edu}
+     % Twitter: \> \href{https://twitter.com/SamuelAcunaPhD}{@SamuelAcunaPhD}\\
+     % LinkedIn: \> \href{https://www.linkedin.com/in/samuelacunaphd}{samuelacunaphd}\\
+\end{tabbing}
+
+%---------------------------------------------------------------------------------------------------
+%\section{Summary}
+%Biomechanical engineer with 10+ years research experience involving rehabilitation engineering, biomechanics, and human-centered product design. I develop new medical technologies to address movement disorders that develop after injury, such as stroke or traumatic brain injury. I'm particularly interested in solving engineering problems for the hospital \& health care industry with innovative and emerging technology, such as virtual reality, ultrasound, and noninvasive neural stimulation. 
+
+
+%---------------------------------------------------------------------------------------------------
+\section{Education}
+
+\textbf{Doctor of Philosophy}, Mechanical Engineering 
+\hfill May 2019\\ 
+University of Wisconsin–Madison, Madison, WI
+
+\medskip
+
+\textbf{Master of Science}, Mechanical Engineering 
+\hfill May 2015\\
+University of Wisconsin–Madison, Madison, WI
+
+\medskip
+
+\textbf{Bachelor of Science}, Mechanical Engineering 
+\hfill December 2012\\
+Brigham Young University, Provo, UT
+
+%---------------------------------------------------------------------------------------------------
+\section{Positions}
+
+\textbf{Postdoctoral Research Fellow} 
+\hfill 05/2021 -- Present
+\\PI: Siddhartha Sikdar, Ph.D.
+\\Biomedical Imaging Laboratory, Dept. of Bioengineering 
+\\Center for Adaptive Systems of Brain-Body Interactions 
+\\George Mason University, Fairfax, VA
+
+\medskip
+
+\textbf{Patent Technical Advisor}
+\hfill 08/2020 -- 04/2021
+\\Patent Prosecution \& Counseling 
+\\Cooley LLP, Reston, VA
+
+\medskip
+
+\textbf{Technical Manager} \hfill 12/2019 -- 07/2020
+\\UTDesign Senior Engineering Capstone Program 
+\\University of Texas at Dallas, Richardson, TX
+
+\medskip
+
+\textbf{Postdoctoral Researcher} \hfill 06/2019 -- 07/2020
+\\PI: Yasin Dhaher, Ph.D.
+\\Dept. of Physical Medicine \& Rehabilitation 
+\\University of Texas Southwestern Medical Center, Dallas, TX
+
+\medskip
+
+\textbf{Graduate Research Assistant} \hfill 10/2013 -- 05/2019
+\\PI: Darryl Thelen, Ph.D.
+\\Neuromuscular Biomechanics Laboratory, Dept. of Mechanical Engineering 
+\\University of Wisconsin–Madison, Madison, WI
+
+\medskip
+
+\textbf{Research Assistant} \hfill 08/2010 -- 12/2012
+\\PI: Steven Charles, Ph.D.
+\\Neuromechanics Research Group, Dept. of Mechanical Engineering
+\\Brigham Young University, Provo, UT
+
+\medskip
+
+\textbf{Systems Engineer} \hfill 04/2010 -- 08/2010
+\\Airborne Early Warning \& Control: Project Wedgetail ISS 
+\\The Boeing Company, Kent, WA
+
+%---------------------------------------------------------------------------------------------------
+\section{Publications}
+
+%\subsection{Manuscripts in Review:}
+%\begin{enumerate}
+%    \item Majdi JA, \textbf{Acuña SA}, Chitnis PV, Sikdar S (2022). Towards a wearable monitor of local muscle fatigue during electrical stimulation using tissue Doppler imaging. \textit{Wearable Technologies}. (\textit{Accepted.})
+%\end{enumerate}
+
+\subsection{Peer-Reviewed Publications:}
+\begin{enumerate}
+    \item Majdi JA, \textbf{Acuña SA}, Chitnis PV, Sikdar S (2022). Towards a wearable monitor of local muscle fatigue during electrical stimulation using tissue Doppler imaging. \textit{Wearable Technologies}. [\href{https://www.cambridge.org/core/journals/wearable-technologies/article/toward-a-wearable-monitor-of-local-muscle-fatigue-during-electrical-muscle-stimulation-using-tissue-doppler-imaging/4ADA49B3A98D245E222D5CCFDE1F180D}{Link}]
+    \item Engdahl SM, \textbf{Acuña SA}, King EL, Bashatah A, S Sikdar (2022). First-in-human demonstration of functional task performance using a sonomyographic prosthesis. \textit{Frontiers in Bioengineering \& Biotechnology}, 10: 876836. [\href{https://www.frontiersin.org/articles/10.3389/fbioe.2022.876836/full}{Link}]
+    \item \textbf{Acuña SA}, Tyler ME, Thelen DG (2022). Individuals with chronic mild to moderate traumatic brain injury exhibit decreased neuromuscular complexity during gait. \textit{Neurorehabilitation and Neural Repair}, 36(4-5): 317-327. [\href{https://journals.sagepub.com/doi/full/10.1177/15459683221081064}{Link}]
+    \item Schroeder MJ, \textbf{Acuña SA}*, Krishnan C, Dhaher YY (2022). Can increased locomotor task complexity differentiate knee muscle forces after ACL-Reconstruction? \textit{Applied Biomechanics}, 38(2): 84-94. [\href{https://journals.humankinetics.com/view/journals/jab/38/2/article-p84.xml}{Link}] (*Acuña is considered a co-ﬁrst author)
+    \item \textbf{Acuña SA}, Ebrahimi A, Pomeroy RL, Martin JA, Thelen DG (2019). Achilles tendon shear wave speed tracks the dynamic modulation of standing balance. \textit{Physiological Reports}, 7: e14298. [\href{https://physoc.onlinelibrary.wiley.com/doi/full/10.14814/phy2.14298}{Link}]
+    \item \textbf{Acuña SA}, Zunker JD, Thelen DG (2019). The effects of sub-threshold vibratory noise on visuomotor entrainment during human walking and standing in a virtual reality environment. \textit{Human Movement Science}, 66: 587-599. [\href{https://www.sciencedirect.com/science/article/abs/pii/S0167945719300582}{Link}]
+    \item \textbf{Acuña SA}, Francis CA, Franz JR, Thelen DG (2019). The effects of cognitive load and optical ﬂow on antagonist leg muscle coactivation during walking for young and older adults. \textit{Electromyography and Kinesiology}, 44: 8-14. [\href{https://www.sciencedirect.com/science/article/abs/pii/S1050641118303122}{Link}]
+    \item \textbf{Acuña SA}, Tyler ME, Danilov YP, Thelen DG (2018). Abnormal muscle activation patterns are associated with chronic gait deﬁcits following traumatic brain injury. \textit{Gait \& Posture}, 62: 510-517. [\href{https://www.sciencedirect.com/science/article/abs/pii/S096663621830359X}{Link}] (Finalist for best paper award, GCMAS 2017.)
+    \item \textbf{Acuña SA}, Smith DM, Robinson JM, Hawks JC, Starbuck P, King DL, Ridge ST, Charles SK (2014). Instrumented ﬁgure skating blade for measuring on-ice skating forces. \textit{Measurement Science and Technology}, 25(12): 125901. [\href{https://iopscience.iop.org/article/10.1088/0957-0233/25/12/125901}{Link}]
+\end{enumerate}
+
+%\subsection{Invited Commentaries:}
+%\subsection{Letters to the Editor:}
+%\subsection{Written, but not yet submitted:} % in preparation
+%\begin{enumerate}
+%     \item 
+%\end{enumerate}
+
+%\subsection{Patents/IP:}
+%\begin{enumerate}
+%     \item 
+%\end{enumerate}
+
+\subsection{Other:}
+\begin{enumerate}
+    \item \textbf{Acuña SA} (2019). Altered neuromuscular control of gait following traumatic brain injury and targeted neuromodulation to improve motor function. \textit{The University of Wisconsin -- Madison. ProQuest Dissertations Publishing}, 13882699. [\href{https://www.proquest.com/docview/2229834647}{Link}]
+\end{enumerate}
+
+%---------------------------------------------------------------------------------------------------
+\section{Conference Abstracts}
+\begin{enumerate}
+    \item \textbf{Acuña SA}, Bashatah A, Sutherland RF, Kaliki RR, Sikdar S. A wearable ultrasound system for controlling an upper-limb prosthesis. Presentation at the 49th Academy Annual Meeting \& Scientiﬁc Symposium of the American Academy of Orthotists \& Prosthetists. Nashville, TN. March 2023. (\textit{Submitted.})
+    \item Patwardhan S, \textbf{Acuña SA}, Sikdar S. Comparison of virtual end-point trajectories using sonomyography with trajectories derived from coordinated multi-joint movements. Poster presentation at the Military Health System Research Symposium. Kissimmee, FL. September 2022. (\textit{Accepted.})
+    \item Bashatah A, Rima AH, King EL, Kaur A, \textbf{Acuña SA}, Chitnis PV, Sikdar S. Wearable ultrasound for rehabilitation applications. Presentation at the 46th International Symposium on Ultrasonic Imaging and Tissue Characterization. Virtual Meeting. June 2022. (\textit{Accepted.})
+    \item \textbf{Acuña SA}, Engdahl SM, Bashatah A, Otto P, Kaliki RR, Sikdar S. A wearable sonomyography system for prosthesis control. Poster presentation at the Myoelectric Controls Symposium. Hosted by the Institute of Biomedical Engineering at the University of New Brunswick. Fredericton, NB. August 2022. (\textit{Accepted.})
+    \item Engdahl SM, \textbf{Acuña SA}, Bashatah A, Dhawan AS, King EL, Mukherjee B, Holley RJ, Monroe BJ, Lévay G, Kaliki RR, Sikdar S. Assessing the feasibility of using sonomyography for upper limb prosthesis control. Podium presentation at the Myoelectric Controls Symposium. Hosted by the Institute of Biomedical Engineering at the University of New Brunswick. Fredericton, NB. August 2022. (\textit{Accepted.})
+    \item \textbf{Acuña SA}, Engdahl SM, King EL, Bashatah A, Sikdar S. Reliability of sonomyography for controlling prosthetic hand grasps. Poster presentation at the North American Congress on Biomechanics. Ottawa, ON. August 2022. (\textit{Accepted.})
+    \item King EL, Engdahl SM, \textbf{Acuña SA}, Bashatah A, Sikdar S. Continuous testing of sonomyography as a control paradigm for upper limb prostheses. Poster presentation at the North American Congress on Biomechanics. Ottawa, ON. August 2022. (\textit{Accepted.})
+    \item Engdahl SM, Mukherjee B, Dhawan AS, Bashatah A, Patwardhan S, \textbf{Acuña SA}, King EL, Lancaster BC, Akhlaghi N, Holley RJ, Monroe BJ, Kaliki RR, Sikdar S. Development of a novel ultrasound-based modality for control of upper limb prostheses. Presentation at the Trent International Prosthetics Symposium. Hosted online by the International Society for Prosthetics and Orthotics member societies of the United Kingdom and Netherlands. March 2022. (Winner of the Best Paper Award.)
+    \item \textbf{Acuña SA}, Bashatah A, Chitnis PV, Sikdar S. Measuring signal quality in low power wearable ultrasound imaging. Presentation at the Acoustical Society of America. Seattle, WA. November 2021. [\href{https://asa.scitation.org/doi/10.1121/10.0007727}{Link}]
+    \item \textbf{Acuña SA}. Quantitative electromyographic analysis can inform treatment planning for gait disorders. Presentation at the Frontiers of Computing in Health and Society, Institute for Digital Innovation, George Mason University. Fairfax, VA. September 2021.
+    \item \textbf{Acuña SA}, Schroeder MJ, Krishnan C, Dhaher YY. Increased task demand differentiates knee muscle forces after ACL-reconstruction. Presentation at the American Society of Biomechanics Annual Meeting. Atlanta, GA. August 2020.
+    \item \textbf{Acuña SA}, Kunnappally JR, Soedirdjo SDH, Phan P, Kim H, Rodriguez LA, Hutcherson CW, Chung YC, Dhaher YY. The role of estrogen on reciprocal inhibition of the Soleus. Oral presentation at the XXIII Congress of the International Society of Electrophysiology and Kinesiology. Nagoya, Japan. July 2020.
+    \item Soedirdjo SDH, \textbf{Acuña SA}, Kunnappally JR, Phan P, Kim H, Rodriguez LA, Hutcherson CW, Chung YC, Dhaher YY. Isolated mixed effect of estradiol and progesterone on motor neuron excitability. Oral presentation at the XXIII Congress of the International Society of Electrophysiology and Kinesiology. Nagoya, Japan. July 2020.
+    \item \textbf{Acuña SA}, Ebrahimi A, Thelen DG. Achilles tendon shear wave speed tracks the dynamic modulation of standing balance. Oral presentation at the XXIII Congress of the International Society of Electrophysiology and Kinesiology. Nagoya, Japan. July 2020.
+    \item \textbf{Acuña SA}, Dhaher YY. Individuals with chronic traumatic brain injury exhibit decreased neuromuscular complexity when walking: an overview of neuromechanics research. Podium presentation at the UT Southwestern Postdoctoral Association Annual Research Symposium. Dallas, TX. September 2019.
+    \item \textbf{Acuña SA}, Ebrahimi A, Thelen DG. Achilles tendon shear wave speed as a measure of the active modulation of standing balance. Podium and poster presentation at the joint conference of the International Society of Biomechanics and American Society of Biomechanics. Calgary, AB. August 2019. (Finalist for ASB Doctoral Student Presentation Competition.)
+    \item \textbf{Acuña SA}, Zunker JD, Thelen DG. Sub-threshold vibratory noise does not alter visuomotor entrainment during human walking. Poster presentation at the Gait and Clinical Motion Analysis Society Annual Meeting. Frisco, TX. March 2019.
+    \item \textbf{Acuña SA}, Tyler ME, Danilov YP, Thelen DG. Changes in dynamic motor control following neurorehabilitation for traumatic brain injury: treadmill vs overground walking. Podium and poster presentation at the American Society of Biomechanics Annual Meeting. Rochester, MN. August 2018. (Finalist for ASB Doctoral Student Presentation Competition.)
+    \item \textbf{Acuña SA}, Tyler ME, Danilov YP, Thelen DG. Improvements in dynamic motor control following neurorehabilitation of chronic balance deﬁcits due to prior traumatic brain injury. Podium presentation at the 8th World Congress of Biomechanics. Dublin, Ireland. July 2018. (Runner up for the ASME-BED PhD Level Student Paper Competition.)
+    \item \textbf{Acuña SA}, Francis CA, Franz JR, Thelen DG. Walking with visual perturbations but not an attention-dividing task modulates muscle coactivation patterns in old adults. Podium presentation at the XXII Congress of the International Society of Electrophysiology and Kinesiology. Dublin, Ireland. June 2018.
+    \item \textbf{Acuña SA}, Michaelis JE, Roth JD, Towles JD. Intervention designed to increase interest in engineering for low-interest, K-12 girls did so for boys and girls. Presentation at the American Society for Engineering Educations Annual Conference and Exposition. Salt Lake City, UT. June 2018.
+    \item \textbf{Acuña SA}, Tyler ME, Danilov YP, Thelen DG. Effect of non-invasive neuromodulation on rehabilitation of gait in chronic traumatic brain injury. Podium presentation at the Gait and Clinical Motion Analysis Society Annual Meeting. Indianapolis, IN. May 2018.
+    \item \textbf{Acuña SA}, Tyler M, Danilov Y, Thelen DG. Individuals with a prior traumatic brain injury exhibit decreased neuromuscular complexity during gait. Thematic poster presentation at the American Society of Biomechanics Annual Meeting. Boulder, CO. August 2017.
+    \item Zunker JD, \textbf{Acuña SA}, Thelen DG. Piezoelectric device for peripheral stochastic sub sensory vibration. Poster presentation at the American Society of Biomechanics Annual Meeting. Boulder, CO. August 2017.
+    \item Francis CA, Michaelis JE, \textbf{Acuña SA}, Towles JD. Impact of Biomechanics-based activities on situational and individual interest among K-12 students. Podium presentation at the 2017 American Society for Engineering Education Annual Conference and Exposition. Columbus, OH. June 2017.
+    \item \textbf{Acuña SA}, Tyler M, Danilov Y, Thelen DG. Muscle activation patterns during walking are correlated to clinical gait assessments after traumatic brain injury. Podium presentation at the Gait and Clinical Movement Analysis Society Annual Meeting. Salt Lake City, UT. May 2017. (Nominated for best paper.)
+    \item \textbf{Acuña SA}, Thelen DG. Cranial nerve non-invasive neuromodulation for symptomatic treatment of traumatic brain injury. Poster presentation at the Opportunities in Engineering Annual Conference. Madison, WI. November 2016.
+    \item Francis CA, Franz JR, \textbf{Acuña SA}, Thelen DG. Gait and balance training improves gait variability in older adults. Thematic poster presentation at the American Society of Biomechanics Annual Meeting. Raleigh, NC. August 2016.
+    \item \textbf{Acuña SA}, Tyler M, Danilov Y, Thelen DG. Cranial nerve non-invasive neuromodulation for symptomatic treatment of mild and moderate traumatic brain injury: effects on muscle coordination patterns during walking. Podium presentation at the XXI Congress of the International Society of Electrophysiology and Kinesiology. Chicago, IL. July 2016.
+    \item \textbf{Acuña SA}, Tyler M, Danilov Y, Thelen DG. Cranial nerve non-invasive neuromodulation for symptomatic treatment of mild and moderate traumatic brain injury: effects on muscle coordination patterns during walking. Poster presentation at the Dynamic Walking Conference: Principles of Dynamic Locomotion. Holly, MI. June 2016.
+    \item \textbf{Acuña SA}, Thelen DG. Efforts for preventing falls in the elderly via stochastic resonance. Poster presentation at the Opportunities in Engineering Annual Conference. Madison, WI. October 2015.
+    \item \textbf{Acuña SA}, Towles JD, Thelen DG. Modeling based analysis of the trapezial-metacarpal joint to reduce osteoarthritis. Poster presentation at the Opportunities in Engineering Annual Conference. Madison, WI. November 2014.
+    \item Smith DM, \textbf{Acuña SA}, Hawks JC, Packard JG, Robinson JM, King DL, Ridge ST, Charles SK. System for measuring ﬁgure skate forces on ice. Poster presentation at the 7th World Congress of Biomechanics. Boston, MA. July 2014.
+    
+\end{enumerate}
+
+%---------------------------------------------------------------------------------------------------
+\section{Invited Presentations}
+\begin{enumerate}
+    \item  Wearable ultrasound for controlling prosthetic hands. Department of Mechanical Engineering, Brigham Young University. Provo, UT. May 2022.
+    \item  Research and teaching in biomedical engineering education, University of the District of Columbia. Washington, DC. May 2022.
+    \item  Improving physical rehabilitation with virtual reality and wearable ultrasound. Department of Mechanical Engineering, Gonzaga University. Spokane, WA. April 2022.
+    \item  Towards wearable ultrasound imaging with the Achilles tendon. Medical Engineering Conference, hosted by the Biomedical Engineering Society at George Mason University. Fairfax, VA. March 2022.
+    \item  Using ultrasound to measure Achilles tendon kinematics, kinetics, and material properties when walking. Acoustical Society of America Annual Conference. Seattle, WA. November 2021. [\href{https://asa.scitation.org/doi/10.1121/10.0008319}{Link}]
+    \item  Improvements in dynamic motor control following neurorehabilitation of traumatic brain injury. Biomedical Engineering Guest Lecture Series. University of the District of Columbia. Washington, DC. January 2021.
+    \item  Becoming successful product design engineers. Future Faculty Career Exploration Program. Rochester Institute of Technology. Rochester, NY. September 2018.
+    \item  Non-invasive neuromodulation to improve upright balance when walking. Neuromechanics seminar. Brigham Young University. Provo, UT. May 2017.
+    \item  Maintenance of balance with aging: choose your steps carefully. 28th Annual Colloquium on Aging. UW--Madison Institute on Aging. Madison, WI. September 2016. (\textit{Voted most popular speaker by colloquium attendees.})
+    \item  Maintaining balance while aging: choose your steps carefully. The Wisconsin Institutes for Discovery: Noon @ the Niche lecture series. University of Wisconsin--Madison. Madison, WI. March 2016.
+    \item Maintenance of balance with aging: choose your steps carefully. UW--Madison Institute on Aging Materials Science Program. Madison, WI. October 2015.
+\end{enumerate}
+
+%---------------------------------------------------------------------------------------------------
+\section{Grant Support}
+
+%\subsection{Current:}
+%\begin{itemize}
+%    \item[] 
+%\end{itemize}
+
+
+\subsection{Completed:}
+\begin{itemize}
+    \item[] R01HD092697-01S1 (PI: Thelen DG) \hfill 03/2018 -- 12/2019
+    \\NIH Eunice Kennedy Schriver National Institute of Child Health \& Human Development
+    \\Research Supplement to Promote Diversity in Health-Related Research
+    \\“Noninvasive assessment of in vivo tissue loads to enhance the treatment of gait disorders”
+    \\Role: Co-Investigator
+    \\Amount: \$35,915
+
+\end{itemize}
+
+%---------------------------------------------------------------------------------------------------
+\section{Honors \& Awards}
+\begin{itemize}
+    \item Best paper award (with Engdahl SM). Trent International Prosthetics Symposium. 2022.
+    \item Finalist, Graduate Student Rapid Poster Award Competition, Conference for the International Society of Biomechanics. 2019.
+    \item Travel Award, Education Council of the Gait and Clinical Movement Analysis Society. 2019.
+    \item 3rd place, Engineering Expo Graduate Exhibits, University of Wisconsin--Madison. 2019.
+    \item Finalist, Doctoral Student Presentation Competition, Conference for the American Society of Biomechanics. 2018.
+    \item Runner Up, ASME-BED PhD Level Student Paper Competition, 8th World Congress of Biomechanics. 2018.
+    \item Student Travel Grant, De Luca Foundation, 8th World Congress of Biomechanics. 2018. 
+    \item 1st place, Engineering Expo Graduate Exhibits, University of Wisconsin--Madison. 2018.
+    \item Kevin Granata Young Investigator Award, Gait and Clinical Movement Analysis Society. 2017. 
+    \item Finalist, Best Paper Award, Gait and Clinical Movement Analysis Society. 2017.
+    \item Student Travel Grant, De Luca Foundation, Conference for the American Society of Biomechanics. 2017.
+    \item Greatest Impact Award, National Biomechanics Day Student Competition. 2017. 
+    \item 1st place, Engineering Expo Graduate Exhibits, University of Wisconsin--Madison. 2017. 
+    \item Travel Award, Education Council of the Gait and Clinical Movement Analysis Society. 2017.
+    \item Mechanical Engineering---Graduate School Physical Sciences Division Fellowship, University of Wisconsin--Madison. 2016.
+    \item 1st place, Engineering Expo Graduate Exhibits, University of Wisconsin--Madison. 2016.
+    \item Diversity Travel Award, American Society of Biomechanics. 2015. 
+    \item Training, Education, And Mentoring in Science (TEAM-Science) Program Scholar, University of Wisconsin--Madison. 2015--2017.
+    \item Advanced Opportunity Fellowship, Graduate Engineering Research Scholars (GERS), University of Wisconsin--Madison. 2014--2018.
+    \item Passed the NCEES Fundamentals of Engineering Exam. 2012.
+\end{itemize}
+
+%---------------------------------------------------------------------------------------------------
+\section{Professional Organizations}
+\begin{itemize}
+     \item Member, American Society of Biomechanics
+     \item Member, International Society of Electrophysiology and Kinesiology
+     \item Member, Gait and Clinical Movement Analysis Society
+     \item Afﬁliate Member, UW--Madison Teaching Academy 
+     \item Afﬁliate Member, National Postdoctoral Association
+\end{itemize}
+
+%---------------------------------------------------------------------------------------------------
+\section{Professional Service}
+\subsection{Manuscript Review:}
+\begin{itemize}
+    \item Biomechanics
+    \item Gait \& Posture
+    \item Ultrasonic Imaging
+\end{itemize}
+
+\subsection{Conference Paper Review:}
+\begin{itemize}
+    \item American Society of Mechanical Engineers, International Design Engineering Technical Conferences \& Computers and Information in Engineering Conference.
+\end{itemize}
+
+\subsection{Grant Review:}
+\begin{itemize}
+    \item SPiRE (Special Projects in Rehabilitation Excellence), Veterans Health Administration Office of Research and Development.
+    \item AOPA (American Orthotic \& Prosthetic Association), Center for Orthotic \& Prosthetic Learning and Outcomes/Evidence-Based Practice (COPL)
+\end{itemize}
+
+\subsection{Symposium Chair:}
+\begin{itemize}
+     \item Using Virtual Reality for Physical Rehabilitation. North American Congress on Biomechanics. Ottawa, ON. August 2022.
+\end{itemize}
+
+
+\subsection{Key Roles:}
+\begin{enumerate}
+    \item Student Advisory Committee, American Society of Biomechanics. 09/2016 – 08/2019
+    \item Chair, National Biomechanics Day Committee. University of Wisconsin--Madison. 2015-18.
+\end{enumerate}
+
+\subsection{Other:}
+\begin{enumerate}
+    \item Intro to Bioengineering STEM Fusion class. College Readiness Early Identiﬁcation Program, George Mason University. March 2022.
+    \item Career Day Panelist. College Readiness Early Identiﬁcation Program, George Mason University. September 2021.
+    \item Adjudicator. Senior Design Capstone Program, Jonsson School of Engineering \& Computer Science, The University of Texas at Dallas. December 2019.
+    \item Engineering Expo exhibit: The Human Machine. University of Wisconsin--Madison. April 2019.
+    \item Engineering Expo exhibit: The Human Machine. University of Wisconsin–Madison. April 2018.
+    \item Presentation on Electromyography. Teen Science Cafe. Wisconsin Institute for Discovery. Madison, WI. April 2017.
+    \item Engineering Expo exhibit: The Human Machine. University of Wisconsin--Madison. April 2017.
+    \item Presentation on Product Design. Federal Way High School. Federal Way, WA. September 2016.
+    \item Engineering Expo exhibit: The Human Machine. University of Wisconsin--Madison. April 2016.
+    \item Engineering Expo exhibit: Engineering the Super Human. University of WisconsinMadison. April 2015.
+    \item Presentation on Electromyography. Akira Toki Middle School. Madison, WI. October 2014.
+\end{enumerate}
+
+%---------------------------------------------------------------------------------------------------
+\section{Teaching Experience}
+
+\textit{George Mason University, Dept. of Bioengineering}\\
+\textbf{Fall 2022}, Instructor, BENG 501 (Research Methods)\\
+\textbf{Fall 2021 -- Spring 2022}, Faculty Advisor for Senior Design Team, BENG 492/493 (Senior Advanced Design)\\ 
+\textbf{Fall 2021}, Guest Lecture, BENG 391 (Professional Development)
+
+\bigskip
+
+\textit{George Mason University, Provost’s Ofﬁce}\\
+\textbf{Summer 2022}, Guest Lecture, PROV801/802 (Community-Engaged Interdisciplinary Methods)\\
+\textbf{Spring 2022}, Guest Lecture, PROV801/802 (Community-Engaged Interdisciplinary Methods)
+
+\bigskip
+
+\textit{George Mason University, Dept. of Mechanical Engineering}\\
+\textbf{Fall 2021 -- Spring 2022}, Faculty Advisor for Senior Design Team, ME 443/444 (Mechanical Design)
+
+\bigskip
+
+\textit{Gonzaga University, Dept. of Mechanical Engineering}\\
+\textbf{Spring 2022}, Guest Lecture, MENG 330 (Machine Design)
+
+\bigskip
+
+\textit{University of Texas at Dallas, Dept. Of Mechanical Engineering}\\
+\textbf{Spring 2020}, Technical Manager, MECH 4382 (Senior Design)
+
+\bigskip
+
+\textit{University of Wisconsin–-Madison, Dept. of Mechanical Engineering}\\
+\textbf{Fall 2018}, Teaching Assistant and Co-Instructor, ME 549 (Product Design)\\
+\textbf{Fall 2017}, Teaching Assistant and Co-Instructor, ME 549 (Product Design)\\ 
+\textbf{Fall 2016}, Teaching Assistant and Co-Instructor, ME 549 (Product Design)\\ 
+\textbf{Fall 2015}, Teaching Assistant, ME 549 (Product Design)
+
+\bigskip
+
+\textit{University of Wisconsin–-Madison, Dept. of Biomedical Engineering}\\
+\textbf{Spring 2017}, Mentor for Student Design Team, BME 201/301 (Biomedical Engineering Design)\\
+\textbf{Fall 2016}, Mentor for Student Design Team, BME 200/300 (Biomedical Engineering Design)
+
+\bigskip
+
+\textit{University of Wisconsin--Madison, Pre-College Enrichment Opportunity Program for Learning Excellence}\\
+\textbf{Summer 2017}, Instructor, Engineering Workshop (Mechatronics for Product Design)
+
+\bigskip
+
+\textit{University of Wisconsin--Milwaukee, Dept. of Kinesiology}\\
+\textbf{Spring 2016}, Guest Lecture, KINES 910 (Advanced Seminar in Health Sciences)
+
+\bigskip
+
+\textit{Brigham Young University, Dept. of Mechanical Engineering}\\
+\textbf{Fall 2012}, Teaching Assistant, ME 373 (Scientiﬁc Computing and Computer Aided Engineering)
+
+
+%---------------------------------------------------------------------------------------------------
+\section{Mentoring Experience}
+\subsection{Graduate Students:}
+Erica King, George Mason University (Bioengineering) \hfill 2021 -- Present\\
+Joseph Majdi, George Mason University (Bioengineering) \hfill 2021 -- 2022\\
+Tony Kim, University of Texas--Dallas (Biomedical Engineering) \hfill 2019 -- 2020
+
+\subsection{Undergraduate Students:}
+Gabriel Gibson, George Mason University (Bioengineering) \hfill 2022 -- Present\\
+Maddie Krotine, University of Virginia (Biomedical Engineering) \hfill 2022 -- 2022\\
+Ryan Devlin, University of Texas--Dallas (Biomedical Engineering) \hfill 2020 -- 2020\\
+Bailey Ramesh, UW--Madison (Biomedical Engineering) \hfill 2017 -- 2018\\
+Isaac Loegering, UW--Madison (Biomedical Engineering) \hfill 2016 -- 2016\\
+John Zunker, UW--Madison (Mechanical Engineering) \hfill 2015 -- 2018
+
+\subsection{Mentored Student Honors and Awards:}
+Faustin Prinz Undergraduate Research Fellowship, John Zunker \hfill 2016
+
+%---------------------------------------------------------------------------------------------------
+\section{Professional Development}
+\begin{itemize}
+    \item Proposal Writing (ME 699). 15-week course. George Mason University. 2022. 
+    \item Preparing Future Faculty Workshop. 4-week course. Auburn University. 2021. 
+    \item Responsible Conduct of Research. 9-week course. University of Texas Southwestern Medical Center. 2020. 
+    \item Preparation for a Scientiﬁc Career. 9-week course. University of Texas Southwestern Medical Center. 2019. 
+    \item Information Mastery for Postdoctoral Trainees. 9-week course. University of Texas Southwestern Medical Center. 2019. 
+    \item Future Faculty Career Exploration Program. 1-week course. Rochester Institute of Technology. 2018. 
+    \item Research Mentor Training. 14-week course. University of Wisconsin--Madison. 2018.
+    \item Teaching in Science and Engineering. 14-week course. University of Wisconsin--Madison. 2017.
+    \item Effective Teaching with Technology. 14-week course. University of Wisconsin--Madison. 2016.
+    \item Improv to improve Teaching \& Science Communication. 14-week course. University of Wisconsin--Madison. 2016.
+\end{itemize}
+    
+%---------------------------------------------------------------------------------------------------
+% SKILLS (optional section)
+%transferrable skills:
+%Research, Analysis, Interpretation & Reporting
+%Team Leadership, Training, Supervision
+%Content Development & Instruction
+%Scientific Writing & Public Speaking
+%Mentoring and Teaching
+%Ability to Translate Complex Concepts
+%
+%laboratory skills:
+%Human Subjects Testing
+%Electromyography 
+%Biological Systems Signal Processing
+%Mechanical Prototyping
+%Computer Programming (Matlab, LabView, C++)
+%Gait Analysis & Motion Capture
+%Systems Neurophysiology Testing
+%Musculoskeletal Modeling & Simulation
+%Functional Magnetic Resonance Imaging
+%Bioinstrumentation Design
+%
+%areas of expertise:
+%Mechanical Engineering
+%Neuromuscular Biomechanics
+%Rehabilitation Engineering
+%Non-Invasive Neuromodulation
+%Biofeedback & Signal Processing
+%Patent Procurement
+%Biomedical Engineering
+%Human-Centered Product Design
+%Movement Disorder, esp altered Gait & Posture
+%Biomechanics of Aging
+%Muscle Activation & Motor Control
+%Intellectual Property
+
+
+
+
+\end{document}
