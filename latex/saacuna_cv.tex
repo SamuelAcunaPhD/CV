@@ -17,9 +17,9 @@
 %\usepackage[utf8]{inputenc} % Required for inputting international characters
 %\usepackage[T1]{fontenc} % Output font encoding for international characters
 
-\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref} % hyperlinks
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=urlblue]{hyperref} % hyperlinks
 
-\usepackage[top=1in, bottom=1in, left=0.5in, right=0.5in]{geometry}   % set margins
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}   % set margins
 
 \usepackage{datetime} % to create custom date formatting
 \newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR} % new date format: month year
@@ -28,14 +28,23 @@
 
 \usepackage{fancyhdr}   % to create custom headers
 \pagestyle{fancy}   % use fancy header
-\fancyhead[R]{\small \textsl{Updated: \monthyeardate\today}} % right header
-\renewcommand{\headrulewidth}{0pt} % remove top header line
-\headsep = 0.5cm %5pt % less space between header and content
 \fancyfoot[C]{} % clear default page number
-\fancyfoot[R]{\small \textsl{Acuña SA, CV Page \thepage\ of \pageref{LastPage}}} % right footer
+% v1:
+%\fancyhead[R]{\small \textsl{Updated: \monthyeardate\today}} % right header
+%\fancyfoot[R]{\small \textsl{Acuña SA, CV Page \thepage\ of \pageref{LastPage}}} % right footer
+% v2:
+\fancyhead[L]{\small \monthyeardate\today} % right header
+\fancyhead[R]{\small \thepage\ of \pageref{LastPage}} % right header
+
+\renewcommand{\headrulewidth}{0pt} % remove top header line
+\headsep = 1cm %5pt % less space between header and content
+
+
 %\usepackage{showframe} % for debugging the page, to show outer frames
 
 \setlength{\parindent}{0in} % paragraph indentation is zero
+
+\usepackage{hang}
 
 \setcounter{secnumdepth}{0} % suppress section numbering
 
@@ -43,18 +52,19 @@
 \setlist[itemize]{noitemsep} % reduce spacing for itemized lists
 
 \usepackage{color} % Required for custom colors
-\definecolor{slateblue}{rgb}{0.17,0.22,0.34}
-\definecolor{darkblue}{RGB}{61, 90, 128}
-\definecolor{darkerblue}{RGB}{51, 80, 118}
-% \definecolor{gray}{RGB}{110,110,110} % gray
-% \definecolor{lightgray}{RGB}{225,225,225} %light gray
+\definecolor{urlblue}{RGB}{46,117,182}
 
-\usepackage{sectsty} % Allows customization of titles
-\sectionfont{\color{darkblue}} % Color section titles
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+[{\titlerule[0.5pt]}]
+
+\titleformat{\subsection}{\normalsize}{\thesection}{}{}[]
 
 \usepackage{fontspec} % Required for specification of custom fonts
 %\setmainfont{Tahoma}
 \setmainfont{Optima}
+
+
 
 
 
@@ -67,107 +77,90 @@
 % TITLE and contact info
 % 
 
-{\Huge \color{darkerblue} \textbf{Samuel A. Acuña, Ph.D.}}
-%{\Huge \textsc{Samuel A. Acuña, Ph.D.}}
+{\LARGE \textbf{Samuel A. Acuña}}
 {\small \hspace{8pt}  (he/him, \href{https://namedrop.io/samuelacuna}{pronounce})}
-
-\bigskip
-
-Department of Bioengineering
-\\Center for Adaptive Systems of Brain-Body Interactions
-\\George Mason University
-
-\medskip
 
 \begin{tabbing}{l l}
      \hspace{1cm} \= \hspace{10cm} \kill % Spacing within the block
-     Office: \> Peterson Family Health Sciences Hall, Room 3100A \\
-     \> 4400 University Drive, Fairfax, VA 22030\\[6pt]
+     Department of Bioengineering\\
+     Center for Adaptive Systems of Brain-Body Interactions\\
+     George Mason University\\
+     Office: \> Rm 3100A Peterson Hall, 4400 University Drive, Fairfax, VA 22030\\
      Email: \> \href{mailto:sacuna2@gmu.edu}{sacuna2@gmu.edu}
      % Twitter: \> \href{https://twitter.com/SamuelAcunaPhD}{@SamuelAcunaPhD}\\
      % LinkedIn: \> \href{https://www.linkedin.com/in/samuelacunaphd}{samuelacunaphd}\\
 \end{tabbing}
 
+
 %---------------------------------------------------------------------------------------------------
 %\section{Summary}
 %Biomechanical engineer with 10+ years research experience involving rehabilitation engineering, biomechanics, and human-centered product design. I develop new medical technologies to address movement disorders that develop after injury, such as stroke or traumatic brain injury. I'm particularly interested in solving engineering problems for the hospital \& health care industry with innovative and emerging technology, such as virtual reality, ultrasound, and noninvasive neural stimulation. 
-
+%---------------------------------------------------------------------------------------------------
+%\section{Research Statment}
+% The goal of my research is to... (one sentence)
 
 %---------------------------------------------------------------------------------------------------
 \section{Education}
 
-\textbf{Doctor of Philosophy}, Mechanical Engineering 
-\hfill May 2019\\ 
-University of Wisconsin–Madison, Madison, WI
-
+\textbf{Ph.D., Mechanical Engineering}
+\hfill 2015 -- 2019\\ % May 2019
+University of Wisconsin–Madison %, Madison, WI
 \medskip
 
-\textbf{Master of Science}, Mechanical Engineering 
-\hfill May 2015\\
-University of Wisconsin–Madison, Madison, WI
-
+\textbf{M.S., Mechanical Engineering}
+\hfill 2013 -- 2015\\ % May 2015
+University of Wisconsin–Madison %, Madison, WI
 \medskip
 
-\textbf{Bachelor of Science}, Mechanical Engineering 
-\hfill December 2012\\
-Brigham Young University, Provo, UT
+\textbf{B.S., Mechanical Engineering}
+\hfill 2005 -- 2012\\ % December 2012
+Brigham Young University %, Provo, UT
 
 %---------------------------------------------------------------------------------------------------
 \section{Positions}
 
-\textbf{Adjunct Faculty} 
-\hfill 08/2022 -- 12/2022
-\\Dept. of Bioengineering 
-\\George Mason University, Fairfax, VA
-
+\textbf{Adjunct Teaching Faculty}
+\hfill 2022 -- Present\\ % 08/2022 -- 12/2022
+George Mason University, Dept. of Bioengineering
 \medskip
 
-\textbf{Postdoctoral Research Fellow} 
-\hfill 05/2021 -- Present
-\\PI: Siddhartha Sikdar, Ph.D.
-\\Biomedical Imaging Laboratory, Dept. of Bioengineering 
-\\Center for Adaptive Systems of Brain-Body Interactions 
-\\George Mason University, Fairfax, VA
-
+\textbf{Postdoctoral Research Fellow}
+\hfill 2021 -- Present\\ % 05/2021 -- Present
+George Mason University, Dept. of Bioengineering
+% PI: Siddhartha Sikdar, Ph.D. (Biomedical Imaging Laboratory)
 \medskip
 
 \textbf{Patent Technical Advisor}
-\hfill 08/2020 -- 04/2021
-\\Patent Prosecution \& Counseling 
-\\Cooley LLP, Reston, VA
-
+\hfill 2020 -- 2021\\ % 08/2020 -- 04/2021
+Cooley LLP, Patent Prosecution \& Counseling % Reston, VA
 \medskip
 
-\textbf{Technical Manager} \hfill 12/2019 -- 07/2020
-\\UTDesign Senior Engineering Capstone Program 
-\\University of Texas at Dallas, Richardson, TX
-
+\textbf{Technical Manager}
+\hfill 2019 -- 2020\\ % 12/2019 -- 07/2020
+University of Texas at Dallas, UTDesign Senior Engineering Capstone Program %Richardson, TX
 \medskip
 
-\textbf{Postdoctoral Researcher} \hfill 06/2019 -- 07/2020
-\\PI: Yasin Dhaher, Ph.D.
-\\Dept. of Physical Medicine \& Rehabilitation 
-\\University of Texas Southwestern Medical Center, Dallas, TX
-
+\textbf{Postdoctoral Researcher}
+\hfill 2019 -- 2020\\ % 06/2019 -- 07/2020
+University of Texas Southwestern Medical Center, Dept. of Physical Medicine \& Rehabilitation %, Dallas, TX
+%PI: Yasin Dhaher, Ph.D. (no lab name)
 \medskip
 
-\textbf{Graduate Research Assistant} \hfill 10/2013 -- 05/2019
-\\PI: Darryl Thelen, Ph.D.
-\\Neuromuscular Biomechanics Laboratory, Dept. of Mechanical Engineering 
-\\University of Wisconsin–Madison, Madison, WI
-
+\textbf{Graduate Research Assistant}
+\hfill 2013 -- 2019\\ % 10/2013 -- 05/2019
+University of Wisconsin–Madison, Dept. of Mechanical Engineering  % Madison, WI
+% PI: Darryl Thelen, Ph.D. (Neuromuscular Biomechanics Laboratory)
 \medskip
 
-\textbf{Research Assistant} \hfill 08/2010 -- 12/2012
-\\PI: Steven Charles, Ph.D.
-\\Neuromechanics Research Group, Dept. of Mechanical Engineering
-\\Brigham Young University, Provo, UT
-
+\textbf{Research Assistant}
+\hfill 2010 -- 2012\\ % 08/2010 -- 12/2012
+Brigham Young University, Dept. of Mechanical Engineering %Provo, UT
+% PI: Steven Charles, Ph.D. (Neuromechanics Research Group)
 \medskip
 
-\textbf{Systems Engineer} \hfill 04/2010 -- 08/2010
-\\Airborne Early Warning \& Control: Project Wedgetail ISS 
-\\The Boeing Company, Kent, WA
+\textbf{Systems Engineer}
+\hfill 2010 -- 2010\\ % 04/2010 -- 08/2010
+The Boeing Company, Airborne Early Warning \& Control %, Kent, WA, Airborne Early Warning \& Control: Project Wedgetail ISS 
 
 %---------------------------------------------------------------------------------------------------
 \section{Publications}
@@ -211,7 +204,7 @@ Brigham Young University, Provo, UT
 \section{Conference Abstracts}
 \begin{enumerate}
     \item \textbf{Acuña SA}, Bashatah A, Sutherland RF, Kaliki RR, Sikdar S. A wearable ultrasound system for controlling an upper-limb prosthesis. Presentation at the 49th Academy Annual Meeting \& Scientiﬁc Symposium of the American Academy of Orthotists \& Prosthetists. Nashville, TN. March 2023. (\textit{Accepted.})
-    \item Patwardhan S, \textbf{Acuña SA*}, Engdhal SM, Mukherjee B, Gladhill KA, Bashata A, Dhawan AS, Abreu R, Schofield JS, Joiner WM,  Sikdar S. Comparison of virtual end-point trajectories using sonomyography with trajectories derived from coordinated multi-joint movements. Poster presentation at the Military Health System Research Symposium. Kissimmee, FL. September 2022. (*Acuña was added after submission as the presenting author.)
+    \item Patwardhan S, \textbf{Acuña SA}*, Engdhal SM, Mukherjee B, Gladhill KA, Bashata A, Dhawan AS, Abreu R, Schofield JS, Joiner WM,  Sikdar S. Comparison of virtual end-point trajectories using sonomyography with trajectories derived from coordinated multi-joint movements. Poster presentation at the Military Health System Research Symposium. Kissimmee, FL. September 2022. (*Acuña was added after submission as the presenting author.)
     \item \textbf{Acuña, SA}*, Labbé DR, Dingwell JB, Jenkins E. Using Virtual Reality for Physical Rehabilitation. Symposium presentation at the North American Congress on Biomechanics. Ottawa, ON. August 2022. (*Acuña organized and chaired the symposium.)
     \item \textbf{Acuña SA}, Engdahl SM, King EL, Bashatah A, Sikdar S. Reliability of sonomyography for controlling prosthetic hand grasps. Poster presentation at the North American Congress on Biomechanics. Ottawa, ON. August 2022.
     \item King EL, Engdahl SM, \textbf{Acuña SA}, Bashatah A, Sikdar S. Continuous testing of sonomyography as a control paradigm for upper limb prostheses. Poster presentation at the North American Congress on Biomechanics. Ottawa, ON. August 2022.
@@ -274,195 +267,201 @@ Brigham Young University, Provo, UT
 
 \subsection{Completed:}
 \begin{itemize}
-    \item[] R01HD092697-01S1 (PI: Thelen DG) \hfill 03/2018 -- 12/2019
-    \\NIH Eunice Kennedy Schriver National Institute of Child Health \& Human Development
-    \\Research Supplement to Promote Diversity in Health-Related Research
-    \\“Noninvasive assessment of in vivo tissue loads to enhance the treatment of gait disorders”
-    \\Role: Co-Investigator
-    \\Amount: \$35,915
+    \item[] R01HD092697-01S1 (PI: Thelen DG) \hfill 2018 -- 2019\\ % 03/2018 -- 12/2019
+    NIH Eunice Kennedy Schriver National Institute of Child Health \& Human Development\\
+    Research Supplement to Promote Diversity in Health-Related Research\\
+    “Noninvasive assessment of in vivo tissue loads to enhance the treatment of gait disorders”\\
+    Role: Co-Investigator\\
+    Amount: \$35,915\\
+    
+    \item[] R25GM083252 (PI: Carnes, ML) \hfill 2015 -- 2017\\
+    NIH General Medical Sciences\\
+    Initiative for Maximizing Student Development\\
+    "Training and education to advance minority scholars in science (TEAM-Science)"\\
+    Role: Trainee\\
+    
+    \item[] Graduate Research Scholar Fellowship \hfill 2014 -- 2018\\
+    State of Wisconsin Advanced Opportunity Program \& Wisconsin Alumni Research Foundation\\
+    Community: Graduate Engineering Research Scholars, University of Wisconsin--Madison\\
 
 \end{itemize}
 
 %---------------------------------------------------------------------------------------------------
 \section{Honors \& Awards}
-\begin{itemize}
-    \item Finalist, International "Rethink EMG" Competition. Delsys Inc. 2022.
-    \item Best paper award (with Engdahl SM). Trent International Prosthetics Symposium. 2022.
-    \item Finalist, Graduate Student Rapid Poster Award Competition, Conference for the International Society of Biomechanics. 2019.
-    \item Travel Award, Education Council of the Gait and Clinical Movement Analysis Society. 2019.
-    \item 3rd place, Engineering Expo Graduate Exhibits, University of Wisconsin--Madison. 2019.
-    \item Finalist, Doctoral Student Presentation Competition, Conference for the American Society of Biomechanics. 2018.
-    \item Runner Up, ASME-BED PhD Level Student Paper Competition, 8th World Congress of Biomechanics. 2018.
-    \item Student Travel Grant, De Luca Foundation, 8th World Congress of Biomechanics. 2018. 
-    \item 1st place, Engineering Expo Graduate Exhibits, University of Wisconsin--Madison. 2018.
-    \item Kevin Granata Young Investigator Award, Gait and Clinical Movement Analysis Society. 2017. 
-    \item Finalist, Best Paper Award, Gait and Clinical Movement Analysis Society. 2017.
-    \item Student Travel Grant, De Luca Foundation, Conference for the American Society of Biomechanics. 2017.
-    \item Greatest Impact Award, National Biomechanics Day Student Competition. 2017. 
-    \item 1st place, Engineering Expo Graduate Exhibits, University of Wisconsin--Madison. 2017. 
-    \item Travel Award, Education Council of the Gait and Clinical Movement Analysis Society. 2017.
-    \item Mechanical Engineering---Graduate School Physical Sciences Division Fellowship, University of Wisconsin--Madison. 2016.
-    \item 1st place, Engineering Expo Graduate Exhibits, University of Wisconsin--Madison. 2016.
-    \item Diversity Travel Award, American Society of Biomechanics. 2015. 
-    \item Training, Education, And Mentoring in Science (TEAM-Science) Program Scholar, University of Wisconsin--Madison. 2015--2017.
-    \item Advanced Opportunity Fellowship, Graduate Engineering Research Scholars (GERS), University of Wisconsin--Madison. 2014--2018.
-    \item Passed the NCEES Fundamentals of Engineering Exam. 2012.
-\end{itemize}
+
+Finalist, International "Rethink EMG" Competition. Delsys Inc. \hfill 2022\\
+Best paper award (with Engdahl SM). Trent International Prosthetics Symposium. \hfill 2022\\
+Finalist, Graduate Student Rapid Poster Award Competition, International Society of Biomechanics. \hfill 2019\\
+Travel Award, Education Council of the Gait and Clinical Movement Analysis Society. \hfill 2019\\
+3rd place, Engineering Expo Graduate Exhibits, UW--Madison. \hfill 2019\\
+Finalist, Doctoral Student Presentation Competition, American Society of Biomechanics. \hfill 2018\\
+Runner Up, ASME-BED PhD Level Student Paper Competition, 8th World Congress of Biomechanics. \hfill 2018\\
+Student Travel Grant, De Luca Foundation, 8th World Congress of Biomechanics. \hfill 2018\\
+1st place, Engineering Expo Graduate Exhibits, UW--Madison. \hfill 2018\\
+Kevin Granata Young Investigator Award, Gait and Clinical Movement Analysis Society. \hfill 2017\\
+Finalist, Best Paper Award, Gait and Clinical Movement Analysis Society. \hfill 2017\\
+Student Travel Grant, De Luca Foundation, American Society of Biomechanics. \hfill 2017\\
+Greatest Impact Award, National Biomechanics Day Student Competition. \hfill 2017\\
+1st place, Engineering Expo Graduate Exhibits, UW--Madison. \hfill 2017\\
+Travel Award, Education Council of the Gait and Clinical Movement Analysis Society. \hfill 2017\\
+Mechanical Engineering---Graduate School Physical Sciences Division Fellowship, UW--Madison. \hfill 2016\\
+1st place, Engineering Expo Graduate Exhibits, UW--Madison. \hfill 2016\\
+Diversity Travel Award, American Society of Biomechanics. \hfill 2015\\
+NCEES Fundamentals of Engineering Exam. \hfill 2012\\
+
 
 %---------------------------------------------------------------------------------------------------
 \section{Professional Organizations}
-\begin{itemize}
+
+\begin{compacthang}
+     \item Member, Center for Adaptive Systems of Brain-Body Interactions, George Mason University
      \item Member, American Society of Biomechanics
      \item Member, International Society of Electrophysiology and Kinesiology
      \item Member, Gait and Clinical Movement Analysis Society
      \item Afﬁliate Member, UW--Madison Teaching Academy 
      \item Afﬁliate Member, National Postdoctoral Association
-\end{itemize}
+\end{compacthang}
 
 %---------------------------------------------------------------------------------------------------
 \section{Professional Service}
+
 \subsection{Manuscript Review:}
-\begin{itemize}
+\setlength{\hangingleftmargin}{2.5em}
+\setlength{\hangingindent}{2em}
+\begin{compacthang}
     \item Biomechanics
     \item Gait \& Posture
     \item Ultrasonic Imaging
-\end{itemize}
+\end{compacthang}
 
 \subsection{Conference Paper Review:}
-\begin{itemize}
+\begin{compacthang}
     \item American Society of Mechanical Engineers, International Design Engineering Technical Conferences \& Computers and Information in Engineering Conference.
-\end{itemize}
+\end{compacthang}
 
 \subsection{Grant Review:}
-\begin{itemize}
+\begin{hanginglist}
     \item Graduate Research Fellowship Program (GRFP), National Science Foundation
     \item Special Projects in Rehabilitation Excellence( SPiRE), Veterans Health Administration Office of Research and Development.
     \item American Orthotic \& Prosthetic Association (AOPA), Center for Orthotic \& Prosthetic Learning and Outcomes/Evidence-Based Practice (COPL)
-\end{itemize}
+\end{hanginglist}
 
 \subsection{Organized Symposiums:}
-\begin{itemize}
+\begin{hanginglist}
      \item Using Virtual Reality for Physical Rehabilitation. North American Congress on Biomechanics. Ottawa, ON. August 2022.
-\end{itemize}
-
+\end{hanginglist}
 
 \subsection{Key Roles:}
-\begin{enumerate}
-    \item Conference Chair, Regional conference for the American Society of Biomechanics, George Mason University. 2022-23.  
-    \item Student Advisory Committee, American Society of Biomechanics. 09/2016 – 08/2019
-    \item Chair, National Biomechanics Day Committee. University of Wisconsin--Madison. 2015-18.
-\end{enumerate}
+\begin{itemize}
+%    \item Conference Chair, Regional conference for the American Society of Biomechanics, George Mason University. 2022-23.  
+    \item[] Student Advisory Committee, American Society of Biomechanics. \hfill 2016 -- 2019 %09/2016 – 08/2019
+    \item[] Chair, National Biomechanics Day Committee. University of Wisconsin--Madison. \hfill 2015 -- 2018
+\end{itemize}
+
+\subsection{STEM Outreach:}
+\begin{itemize}
+    \item[] National Biomechanics Day presentation. College Readiness Early Identification Program, GMU. \hfill 2022 %March 2022. Intro to Bioengineering STEM Fusion class
+    \item[] Career Day Panelist. College Readiness Early Identification Program, GMU. \hfill 2021 %September 2021.
+    \item[] National Biomechanics Day, Engineering Expo exhibit. UW--Madison. \hfill 2019 %April 2019. : The Human Machine
+    \item[] National Biomechanics Day, Engineering Expo exhibit. UW--Madison. \hfill 2018 %April 2018. : The Human Machine
+    \item[] After school activity. Nuestro Mundo Community School. Monona, WI. \hfill 2018
+    \item[] Presentation. Teen Science Cafe. Wisconsin Institute for Discovery. Madison, WI. \hfill 2017 %April 2017. Presentation on Electromyography
+    \item[] National Biomechanics Day, Engineering Expo exhibit. UW--Madison. \hfill 2017 % April 2017. : The Human Machine
+    \item[] After school activity. Nuestro Mundo Community School. Monona, WI. \hfill 2017
+    \item[] Classroom presentation. Federal Way High School. Federal Way, WA. \hfill 2016 %September 2016. Presentation on Product Design
+    \item[] National Biomechanics Day, Engineering Expo exhibit. UW--Madison. \hfill 2016 %April 2016. : The Human Machine
+    \item[] After school activity. Nuestro Mundo Community School. Monona, WI. \hfill 2016
+    \item[] National Biomechanics Day, Engineering Expo exhibit. UW--Madison. \hfill 2015 %April 2015. : Engineering the Super Human
+    \item[] After school activity. Nuestro Mundo Community School. Monona, WI. \hfill 2015
+    \item[] Classroom presentation. Akira Toki Middle School. Madison, WI. \hfill 2014 % October 2014. Presentation on Electromyography
+\end{itemize}
 
 \subsection{Other:}
-\begin{enumerate}
-    \item Intro to Bioengineering STEM Fusion class. College Readiness Early Identiﬁcation Program, George Mason University. March 2022.
-    \item Career Day Panelist. College Readiness Early Identiﬁcation Program, George Mason University. September 2021.
-    \item Adjudicator. Senior Design Capstone Program, Jonsson School of Engineering \& Computer Science, The University of Texas at Dallas. December 2019.
-    \item Engineering Expo exhibit: The Human Machine. University of Wisconsin--Madison. April 2019.
-    \item Engineering Expo exhibit: The Human Machine. University of Wisconsin–Madison. April 2018.
-    \item Presentation on Electromyography. Teen Science Cafe. Wisconsin Institute for Discovery. Madison, WI. April 2017.
-    \item Engineering Expo exhibit: The Human Machine. University of Wisconsin--Madison. April 2017.
-    \item Presentation on Product Design. Federal Way High School. Federal Way, WA. September 2016.
-    \item Engineering Expo exhibit: The Human Machine. University of Wisconsin--Madison. April 2016.
-    \item Engineering Expo exhibit: Engineering the Super Human. University of WisconsinMadison. April 2015.
-    \item Presentation on Electromyography. Akira Toki Middle School. Madison, WI. October 2014.
-\end{enumerate}
+\begin{itemize}
+    \item[] Senior Design Adjudicator. Jonsson School of Engineering \& Computer Science, UT Dallas. \hfill 2019 %December 2019. Senior Design Capstone Program
+\end{itemize}
 
 %---------------------------------------------------------------------------------------------------
 \section{Teaching Experience}
 
-\textit{George Mason University, Dept. of Bioengineering}\\
-\textbf{Fall 2022}, Instructor, BENG 501 (Research Methods)\\
-\textbf{Fall 2022}, Instructor, BENG 375/575 (Intellectual Property, Regulatory Concepts, and Product Development)\\
-\textbf{Fall 2022}, Guest Lecture, BENG 391 (Professional Development)\\
-\textbf{Fall 2022 -- Spring 2023}, Faculty Advisor for Senior Design Team, BENG 492/493 (Senior Advanced Design)\\ 
-\textbf{Fall 2021 -- Spring 2022}, Faculty Advisor for Senior Design Team, BENG 492/493 (Senior Advanced Design)\\ 
-\textbf{Fall 2021}, Guest Lecture, BENG 391 (Professional Development)
+\textbf{George Mason University}\\
+BENG 501 (Research Methods), Instructor \hfill 2022\\
+BENG 375/575 (Intellectual Prop., Regulatory Concepts, and Product Dev.), Instructor \hfill 2022\\
+BENG 492/493 (Senior Advanced Design), Faculty Advisor for Senior Design Team \hfill 2021 -- 2023\\
+PROV801/802 (Community-Engaged Interdisciplinary Methods), Guest Lecturer \hfill 2022\\
+ME 443/444 (Mechanical Design), Faculty Advisor for Senior Design Team \hfill 2021 -- 2022\\
+BENG 391 (Professional Development), Guest Lecturer \hfill 2021 -- 2022\\
+%\textbf{Fall 2022}, Instructor, BENG 501 (Research Methods)\\
+%\textbf{Fall 2022}, Instructor, BENG 375/575 (Intellectual Property, Regulatory Concepts, and Product Development)\\
+%\textbf{Fall 2022}, Guest Lecture, BENG 391 (Professional Development)\\
+%\textbf{Fall 2022 -- Spring 2023}, Faculty Advisor for Senior Design Team, BENG 492/493 (Senior Advanced Design)\\ 
+%\textbf{Fall 2021 -- Spring 2022}, Faculty Advisor for Senior Design Team, BENG 492/493 (Senior Advanced Design)\\ 
+%\textbf{Fall 2021}, Guest Lecture, BENG 391 (Professional Development)
+%\textbf{Summer 2022}, Guest Lecture, PROV801/802 (Community-Engaged Interdisciplinary Methods)\\
+%\textbf{Spring 2022}, Guest Lecture, PROV801/802 (Community-Engaged Interdisciplinary Methods)
+%\textbf{Fall 2021 -- Spring 2022}, Faculty Advisor for Senior Design Team, ME 443/444 (Mechanical Design)
 
-\bigskip
+\textbf{Gonzaga University}\\
+MENG 330 (Machine Design), Guest Lecture \hfill 2022\\
+%\textbf{Spring 2022}, Guest Lecture, MENG 330 (Machine Design)
 
-\textit{George Mason University, Provost’s Ofﬁce}\\
-\textbf{Summer 2022}, Guest Lecture, PROV801/802 (Community-Engaged Interdisciplinary Methods)\\
-\textbf{Spring 2022}, Guest Lecture, PROV801/802 (Community-Engaged Interdisciplinary Methods)
+\textbf{University of Texas at Dallas}\\
+MECH 4382 (Senior Design), Technical Manager \hfill 2020\\
+%\textbf{Spring 2020}, Technical Manager, MECH 4382 (Senior Design)
 
-\bigskip
+\textbf{University of Wisconsin--Madison}\\
+ME 549 (Product Design), Teaching Assistant and Lecturer \hfill 2015 -- 2018\\
+BME 200/201/300/301 (Biomedical Engineering Design), Mentor for Student Design Team \hfill 2016 -- 2017\\
+Pre-College Enrichment Opportunity Program for Learning Excellence (Mechatronics), Instructor \hfill 2017\\
+%\textbf{Fall 2018}, Teaching Assistant and Co-Instructor, ME 549 (Product Design)\\
+%\textbf{Fall 2017}, Teaching Assistant and Co-Instructor, ME 549 (Product Design)\\ 
+%\textbf{Fall 2016}, Teaching Assistant and Co-Instructor, ME 549 (Product Design)\\ 
+%\textbf{Fall 2015}, Teaching Assistant, ME 549 (Product Design)
+%\textbf{Spring 2017}, Mentor for Student Design Team, BME 201/301 (Biomedical Engineering Design)\\
+%\textbf{Fall 2016}, Mentor for Student Design Team, BME 200/300 (Biomedical Engineering Design)
+%\textit{University of Wisconsin--Madison, Pre-College Enrichment Opportunity Program for Learning Excellence}\\
+%\textbf{Summer 2017}, Instructor, Engineering Workshop (Mechatronics for Product Design)
 
-\textit{George Mason University, Dept. of Mechanical Engineering}\\
-\textbf{Fall 2021 -- Spring 2022}, Faculty Advisor for Senior Design Team, ME 443/444 (Mechanical Design)
+\textbf{University of Wisconsin--Milwaukee}\\
+KINES 910 (Advanced Seminar in Health Sciences), Guest Lecture \hfill 2016\\
+%\textbf{Spring 2016}, Guest Lecture, KINES 910 (Advanced Seminar in Health Sciences)
 
-\bigskip
-
-\textit{Gonzaga University, Dept. of Mechanical Engineering}\\
-\textbf{Spring 2022}, Guest Lecture, MENG 330 (Machine Design)
-
-\bigskip
-
-\textit{University of Texas at Dallas, Dept. Of Mechanical Engineering}\\
-\textbf{Spring 2020}, Technical Manager, MECH 4382 (Senior Design)
-
-\bigskip
-
-\textit{University of Wisconsin–-Madison, Dept. of Mechanical Engineering}\\
-\textbf{Fall 2018}, Teaching Assistant and Co-Instructor, ME 549 (Product Design)\\
-\textbf{Fall 2017}, Teaching Assistant and Co-Instructor, ME 549 (Product Design)\\ 
-\textbf{Fall 2016}, Teaching Assistant and Co-Instructor, ME 549 (Product Design)\\ 
-\textbf{Fall 2015}, Teaching Assistant, ME 549 (Product Design)
-
-\bigskip
-
-\textit{University of Wisconsin–-Madison, Dept. of Biomedical Engineering}\\
-\textbf{Spring 2017}, Mentor for Student Design Team, BME 201/301 (Biomedical Engineering Design)\\
-\textbf{Fall 2016}, Mentor for Student Design Team, BME 200/300 (Biomedical Engineering Design)
-
-\bigskip
-
-\textit{University of Wisconsin--Madison, Pre-College Enrichment Opportunity Program for Learning Excellence}\\
-\textbf{Summer 2017}, Instructor, Engineering Workshop (Mechatronics for Product Design)
-
-\bigskip
-
-\textit{University of Wisconsin--Milwaukee, Dept. of Kinesiology}\\
-\textbf{Spring 2016}, Guest Lecture, KINES 910 (Advanced Seminar in Health Sciences)
-
-\bigskip
-
-\textit{Brigham Young University, Dept. of Mechanical Engineering}\\
-\textbf{Fall 2012}, Teaching Assistant, ME 373 (Scientiﬁc Computing and Computer Aided Engineering)
+\textbf{Brigham Young University}\\
+ME 373 (Scientiﬁc Computing and Computer Aided Engineering), Teaching Assistant \hfill 2012\\
+%\textbf{Fall 2012}, Teaching Assistant, ME 373 (Scientiﬁc Computing and Computer Aided Engineering)
 
 
 %---------------------------------------------------------------------------------------------------
 \section{Mentoring Experience}
-\subsection{Graduate Students:}
+\textbf{Graduate Students}\\
 Erica King, George Mason University (Bioengineering) \hfill 2021 -- Present\\
 Joseph Majdi, George Mason University (Bioengineering) \hfill 2021 -- 2022\\
-Tony Kim, University of Texas--Dallas (Biomedical Engineering) \hfill 2019 -- 2020
+Tony Kim, University of Texas--Dallas (Biomedical Engineering) \hfill 2019 -- 2020\\
 
-\subsection{Undergraduate Students:}
+\textbf{Undergraduate Students}\\
 Gabriel Gibson, George Mason University (Bioengineering) \hfill 2022 -- Present\\
-Maddie Krotine, University of Virginia (Biomedical Engineering) \hfill 2022 -- 2022\\
-Ryan Devlin, University of Texas--Dallas (Biomedical Engineering) \hfill 2020 -- 2020\\
+Maddie Krotine, University of Virginia (Biomedical Engineering) \hfill 2022\\
+Ryan Devlin, University of Texas--Dallas (Biomedical Engineering) \hfill 2020\\
 Bailey Ramesh, UW--Madison (Biomedical Engineering) \hfill 2017 -- 2018\\
-Isaac Loegering, UW--Madison (Biomedical Engineering) \hfill 2016 -- 2016\\
-John Zunker, UW--Madison (Mechanical Engineering) \hfill 2015 -- 2018
+Isaac Loegering, UW--Madison (Biomedical Engineering) \hfill 2016\\
+John Zunker, UW--Madison (Mechanical Engineering) \hfill 2015 -- 2018\\
 
-\subsection{Mentored Student Honors and Awards:}
+\textbf{Mentored Student Honors and Awards}\\
 Faustin Prinz Undergraduate Research Fellowship, John Zunker \hfill 2016
 
 %---------------------------------------------------------------------------------------------------
 \section{Professional Development}
-\begin{itemize}
-    \item Proposal Writing (ME 699). 15-week course. George Mason University. 2022. 
-    \item Preparing Future Faculty Workshop. 4-week course. Auburn University. 2021. 
-    \item Responsible Conduct of Research. 9-week course. University of Texas Southwestern Medical Center. 2020. 
-    \item Preparation for a Scientiﬁc Career. 9-week course. University of Texas Southwestern Medical Center. 2019. 
-    \item Information Mastery for Postdoctoral Trainees. 9-week course. University of Texas Southwestern Medical Center. 2019. 
-    \item Future Faculty Career Exploration Program. 1-week course. Rochester Institute of Technology. 2018. 
-    \item Research Mentor Training. 14-week course. University of Wisconsin--Madison. 2018.
-    \item Teaching in Science and Engineering. 14-week course. University of Wisconsin--Madison. 2017.
-    \item Effective Teaching with Technology. 14-week course. University of Wisconsin--Madison. 2016.
-    \item Improv to improve Teaching \& Science Communication. 14-week course. University of Wisconsin--Madison. 2016.
-\end{itemize}
-    
+Proposal Writing (ME 699). 15-week course. George Mason University. \hfill 2022\\
+Preparing Future Faculty Workshop. 4-week course. Auburn University. \hfill 2021\\ 
+Responsible Conduct of Research. 9-week course. UT Southwestern. \hfill 2020\\
+Preparation for a Scientific Career. 9-week course. UT Southwestern. \hfill 2019\\
+Information Mastery for Postdoctoral Trainees. 9-week course. UT Southwestern. \hfill 2019\\
+Future Faculty Career Exploration Program. 1-week course. Rochester Institute of Technology. \hfill 2018\\ 
+Research Mentor Training. 14-week course. UW--Madison. \hfill 2018\\
+Teaching in Science and Engineering. 14-week course. UW--Madison. \hfill 2017\\
+Effective Teaching with Technology. 14-week course. UW--Madison. \hfill 2016\\
+Improv to improve Teaching \& Science Communication. 14-week course. UW--Madison. \hfill 2016\\
+
 %---------------------------------------------------------------------------------------------------
 % SKILLS (optional section)
 %transferrable skills:
