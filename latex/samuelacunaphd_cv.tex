@@ -33,8 +33,12 @@
 %\fancyhead[R]{\small \textsl{Updated: \monthyeardate\today}} % right header
 %\fancyfoot[R]{\small \textsl{Acuña SA, CV Page \thepage\ of \pageref{LastPage}}} % right footer
 % v2:
-\fancyhead[L]{\small \monthyeardate\today} % right header
-\fancyhead[R]{\small \thepage\ of \pageref{LastPage}} % right header
+%\fancyhead[L]{\small \monthyeardate\today} % right header
+%\fancyhead[R]{\small \thepage\ of \pageref{LastPage}} % right header
+% v3:
+\fancyhead[L]{} % clear heading
+\fancyhead[R]{\footnotesize \textsl{Updated: \monthyeardate\today}} % right header
+\fancyfoot[R]{\small \thepage\ of \pageref{LastPage}} % right footer
 
 \renewcommand{\headrulewidth}{0pt} % remove top header line
 \headsep = 1cm %5pt % less space between header and content
@@ -62,10 +66,12 @@
 \titleformat{\subsection}{\normalsize}{\thesection}{}{}[]
 
 \usepackage{fontspec} % Required for specification of custom fonts
-%\setmainfont{Tahoma}
+%\setmainfont{Georgia}
 %\setmainfont{Avenir Next}
-\setmainfont{Optima}
-
+%\setmainfont{Optima}
+%\setmainfont{Arial}
+%\setmainfont{Kandal Book}
+\setmainfont{Times New Roman}
 
 
 
@@ -80,20 +86,46 @@
 %---------------------------------------------------------------------------------------------------
 % TITLE and contact info
 % 
+% v1 --------------
+%{\LARGE \textbf{Samuel A. Acuña}}
+%{\small \hspace{8pt}  (he/him, \href{https://namedrop.io/samuelacuna}{pronounce})}
+%\begin{tabbing}{l l}
+%     \hspace{1cm} \= \hspace{10cm} \kill % Spacing within the block
+%     Department of Bioengineering\\
+%     Center for Advancing Systems Science and Bioengineering Innovation\\
+%     George Mason University\\
+%     Office: \> Rm 3300A Peterson Hall, 4400 University Drive, Fairfax, VA 22030\\
+%     Email: \> \href{mailto:sacuna2@gmu.edu}{sacuna2@gmu.edu}
+%     % LinkedIn: \> \href{https://www.linkedin.com/in/samuelacunaphd}{samuelacunaphd}\\
+%\end{tabbing}
 
-{\LARGE \textbf{Samuel A. Acuña}}
-{\small \hspace{8pt}  (he/him, \href{https://namedrop.io/samuelacuna}{pronounce})}
+% v2 -------------
+\begin{center}
+{\LARGE \textbf{Samuel A. Acuña, Ph.D.}}
+\end{center}
+\hspace{0.5in} {\footnotesize (he/him, \href{https://namedrop.io/samuelacuna}{pronounce})}
 
-\begin{tabbing}{l l}
-     \hspace{1cm} \= \hspace{10cm} \kill % Spacing within the block
-     Department of Bioengineering\\
-     Center for Adaptive Systems of Brain-Body Interactions\\
-     George Mason University\\
-     Office: \> Rm 3300A Peterson Hall, 4400 University Drive, Fairfax, VA 22030\\
-     Email: \> \href{mailto:sacuna2@gmu.edu}{sacuna2@gmu.edu}
-     % Twitter: \> \href{https://twitter.com/SamuelAcunaPhD}{@SamuelAcunaPhD}\\
-     % LinkedIn: \> \href{https://www.linkedin.com/in/samuelacunaphd}{samuelacunaphd}\\
-\end{tabbing}
+\hspace{0.5in} Research Assistant Professor, Department of Bioengineering
+
+\hspace{0.5in} Assistant Director of Design, Center for Advancing Systems Science and Bioengineering Innovation
+
+\hspace{0.5in} George Mason University, Fairfax, VA
+
+\hspace{0.5in} \href{mailto:sacuna2@gmu.edu}{sacuna2@gmu.edu}
+
+
+
+% v3 -------------
+%\begin{center}
+%{\LARGE \textbf{Samuel A. Acuña}}\\
+%{\footnotesize (he/him, \href{https://namedrop.io/samuelacuna}{pronounce})}\\
+%Research Assistant Professor, Department of Bioengineering\\
+%Assistant Director of Design, Center for Advancing Systems Science and Bioengineering Innovation\\
+%George Mason University, Fairfax, VA\\
+%\href{mailto:sacuna2@gmu.edu}{sacuna2@gmu.edu}\\
+%\end{center}
+
+
 
 
 %---------------------------------------------------------------------------------------------------
@@ -110,6 +142,7 @@
 %---------------------------------------------------------------------------------------------------
 %\section{Research Statment}
 % The goal of my research is to... (one sentence)
+
 
 %---------------------------------------------------------------------------------------------------
 \section{Education}
@@ -131,9 +164,14 @@ Brigham Young University %, Provo, UT
 %---------------------------------------------------------------------------------------------------
 \section{Positions}
 
-\textbf{Assistant Director}
-\hfill 2024 -- Present\\ % 05/2021 -- Present
-George Mason University, Center for Adaptive Systems of Brain-Body Interactions
+\textbf{Assistant Director of Design}
+\hfill 2023 -- Present\\
+George Mason University, Center for Advancing Systems Science and Bioengineering Innovation
+     \begin{compactitem}
+	     \begin{footnotesize}
+     	     \item[] Formerly known as the \textit{Center for Adaptive Systems of Brain-Body Interactions}
+	     \end{footnotesize}
+     \end{compactitem}
 \medskip
 
 \textbf{Research Assistant Professor}
@@ -187,15 +225,15 @@ The Boeing Company, Airborne Early Warning \& Control %, Kent, WA, Airborne Earl
 %---------------------------------------------------------------------------------------------------
 \section{Publications}
 
-%\subsection{Manuscripts in Review:}
-%\begin{enumerate}
-%
-%\end{enumerate}
+\subsection{Manuscripts in Review:}
+\begin{enumerate}
+     \item Jirsaraei MJ, Ji W, \textbf{Acuña SA} (2024). Kinematic Indicators of Physical Fatigue During Walking: A Systematic Review of Assessment Parameters and Protocols. \textit{Applied Ergonomics}.
+\end{enumerate}
 
 \subsection{Journal Articles:}
 \begin{enumerate}
-    \item Bashatah A, Mukherjee B, Rima A, Patwardhan S, Otto P, Sutherland R, King E, Lancastzer B, Aher A, De Marzi L, Gibson G, Taghizadeh Z, \textbf{Acuña SA}, Chitnis P, Sikdar S (2024). Wearable ultrasound system using low-voltage time delay spectrometry for dynamic tissue imaging. \textit{IEEE Transactions in Biomedical Engineering}.  (\textit{Accepted}.)
-    \item \textbf{Acuña SA} (2024). A practical research methods course that teaches how to be a successful biomedical engineering graduate student. \textit{Biomedical Engineering Education}. [\href{https://link.springer.com/article/10.1007/s43683-024-00135-9}{Link}]
+    \item Bashatah A, Mukherjee B, Rima A, Patwardhan S, Otto P, Sutherland R, King E, Lancastzer B, Aher A, De Marzi L, Gibson G, Taghizadeh Z, \textbf{Acuña SA}, Chitnis P, Sikdar S (2024). Wearable ultrasound system using low-voltage time delay spectrometry for dynamic tissue imaging. \textit{IEEE Transactions in Biomedical Engineering}, 71(11):3232-3243. [\href{https://ieeexplore.ieee.org/document/10557691}{Link}] 
+    \item \textbf{Acuña SA} (2024). A practical research methods course that teaches how to be a successful biomedical engineering graduate student. \textit{Biomedical Engineering Education}, 4: 295–304. [\href{https://link.springer.com/article/10.1007/s43683-024-00135-9}{Link}]
     \item Engdahl SM, \textbf{Acuña SA}, Kaliki RR, Sikdar S (2024). Sonomyography for control of upper limb prostheses: current state and future directions. \textit{Prosthetics and Orthotics}, 36(3): 174-178. [\href{https://journals.lww.com/jpojournal/fulltext/2024/07000/sonomyography_for_control_of_upper_limb.6.aspx}{Link}]
     \item Majdi JA, \textbf{Acuña SA}, Chitnis PV, Sikdar S (2022). Towards a wearable monitor of local muscle fatigue during electrical stimulation using tissue Doppler imaging. \textit{Wearable Technologies}, 3: E16. [\href{https://www.cambridge.org/core/journals/wearable-technologies/article/toward-a-wearable-monitor-of-local-muscle-fatigue-during-electrical-muscle-stimulation-using-tissue-doppler-imaging/4ADA49B3A98D245E222D5CCFDE1F180D}{Link}]
     \item Engdahl SM, \textbf{Acuña SA}, King EL, Bashatah A, S Sikdar (2022). First-in-human demonstration of functional task performance using a sonomyographic prosthesis. \textit{Frontiers in Bioengineering \& Biotechnology}, 10: 876836. [\href{https://www.frontiersin.org/articles/10.3389/fbioe.2022.876836/full}{Link}]
@@ -210,30 +248,36 @@ The Boeing Company, Airborne Early Warning \& Control %, Kent, WA, Airborne Earl
 
 \subsection{Refereed Conference Papers:}
 \begin{enumerate}
-     \item \textbf{Acuña SA}, Peixoto N, Matto HC, Seshaiyer P, Sikdar S (2024). Addressing societal challenges through graduate-level community-engaged design projects. \textit{Proc. of the American Society for Engineering Education Conference \& Exposition}. Portland, OR. (\textit{Accepted}.) % june 2024
+     \item \textbf{Acuña SA}, Peixoto N, Matto HC, Seshaiyer P, Sikdar S (2024). Addressing societal challenges through graduate-level community-engaged design projects. \textit{Proc. of the American Society for Engineering Education Conference \& Exposition}. Portland, OR.  [\href{https://peer.asee.org/46521}{Link}] % june 2024
      \item \textbf{Acuña SA}, Michaelis JE, Roth JD, Towles JD (2018). Intervention designed to increase interest in engineering for low-interest, K-12 girls did so for boys and girls. \textit{Proc. of the American Society for Engineering Educations Annual Conference \& Exposition}. Salt Lake City, UT. 10.18260/1-2--30713. [\href{https://peer.asee.org/intervention-designed-to-increase-interest-in-engineering-for-low-interest-k-12-girls-did-so-for-boys-and-girls}{Link}] % june 2018
      \item Francis CA, Michaelis JE, \textbf{Acuña SA}, Towles JD (2017). Impact of Biomechanics-based activities on situational and individual interest among K-12 students. \textit{Proc. of the American Society for Engineering Educations Annual Conference \& Exposition}. Columbus, OH. 10.18260/1-2--28459. [\href{https://peer.asee.org/impact-of-biomechanics-based-activities-on-situational-and-individual-interest-among-k-12-students}{Link}] % june 2017
 \end{enumerate}
 
-\subsection{Conference Abstracts:} %\section{Conference Abstracts}
+\subsection{Conference Abstracts \& Presentations:} %\section{Conference Abstracts}
 \begin{enumerate}
-    \item Lamarre MA, Blanton EA, Boit XA, Chamberlin ME, Montemurro OA, \textbf{Acuña SA}. A 3D-printed carbon fiber weightlifting prosthesis for people with partial finger amputation. Presentation at the Biomedical Engineering Society annual conference. Baltimore, MD. October 2024. (\textit{Accepted}.)
-    \item Tadesse KB, Smiga GP, Schuetz RR, Alamri RM, Hashem J, \textbf{Acuña SA}. Feasibility of at-home gait rehabilitation using a virtual reality headset. Presentation at the Biomedical Engineering Society annual conference. Baltimore, MD. October 2024. (\textit{Accepted}.)
-    \item \textbf{Acuña SA}. Should your department offer a course on how to be a successful graduate student? Interactive session presentation at the 16th Annual Innovations in Teaching and Learning Conference. Fairfax, VA. September 2024. (\textit{Accepted}.)
-    \item Tadesse KB, Sikdar S, \textbf{Acuña SA}. Fascial gliding assessment for myofascial pain syndrome yields consistent upper trapezius activation. Presentation at the American Society of Biomechanics annual meeting. Madison, WI. August 2024. (\textit{Accepted}.)
-    \item Lamarre MA, King EL, Gibson G, \textbf{Acuña SA}, Sikdar S, Chitnis PV. Markerless motion capture can assess symmetry of knee range of motion during rehabilitation for ACL reconstruction. Presentation at the American Society of Biomechanics annual meeting. Madison, WI. August 2024. (\textit{Accepted}.)
-    \item Gibson G, King EL, Lamarre MA, \textbf{Acuña SA}, Sikdar S, Chitnis PV. Monitoring limb symmetry after ACL injury using insole force sensors. Presentation at the American Society of Biomechanics annual meeting. Madison, WI. August 2024. (\textit{Accepted}.)   
-    \item \textbf{Acuña SA}. Should you offer a course on how to be a scientist and a successful graduate student? Presentation at the American Society of Biomechanics annual meeting. Madison, WI. August 2024. (\textit{Accepted}.)
-    \item Taghizadeh Z, Bashatah A, Rima AH, Aher AS, \textbf{Acuña SA}, Sikdar S. Evaluation of proportional position control using a wearable ultrasound system. Presentation at the 46th Annual International Conference of the IEEE Engineering in Medicine \& Biology Society. Orlanda, FL. July 2024. (\textit{Accepted}.)
-    \item \textbf{Acuña SA}, Peixoto N, Matto HC, Seshaiyer P, Sikdar S. Addressing societal challenges through graduate-level community-engaged design projects. Presentation at the Access to Research and Inclusive Excellence (ARIE) National Conference. Fairfax, VA. March 2024.
+    \item Abdulrazzaq R, Lybarger KJ, \textbf{Acuña SA}. Capturing lived experiences of chronic pain through a listening experience model. Poster presentation at the National Conference on Undergraduate Research. Pittsburgh, PA. April 2025. (\textit{Accepted.})
+    \item Wahdan LS, Santos CC, Abdelmalak W, Nguyen VT, \textbf{Acuña SA}. Developing a wearable electrical stimulation device for enhanced wound healing of obstetric lacerations postpartum. Poster presentation at the Biomedical Engineering Society annual conference. Baltimore, MD. October 2024.
+    \item Baasan B, Sikdar S, \textbf{Acuña SA}. Reliability of a head-mounted laser pointer position to access target-tracking tasks. Poster presentation at the Biomedical Engineering Society annual conference. Baltimore, MD. October 2024.
+    \item Abdulrazzaq R, Al Shawi H, King P, Manns S, Amouzou IPE, Popal M, Lee S, Lybarger KJ, \textbf{Acuña SA}. Capturing lived experiences of chronic pain through a listening experience model. Poster presentation at the Biomedical Engineering Society annual conference. Baltimore, MD. October 2024.
+    \item Al Shawi H, Gerber NL, Sikdar S, \textbf{Acuña SA}. Association between trapezius muscle thickness and the pressure pain threshold of patients with chronic neck pain. Poster presentation at the Biomedical Engineering Society annual conference. Baltimore, MD. October 2024.
+    \item Lamarre MA, Blanton EA, Boit XA, Chamberlin ME, Montemurro OA, \textbf{Acuña SA}. A 3D-printed carbon fiber weightlifting prosthesis for people with partial finger amputation. Poster presentation at the Biomedical Engineering Society annual conference. Baltimore, MD. October 2024.
+    \item Tadesse KB, Smiga GP, Schuetz RR, Alamri RM, Hashem L, \textbf{Acuña SA}. Feasibility of at-home gait rehabilitation using a virtual reality headset. Poster presentation at the Biomedical Engineering Society annual conference. Baltimore, MD. October 2024.
+    \item \textbf{Acuña SA}. Should your department offer a course on how to be a successful graduate student? Interactive session presentation at the 16th Annual Innovations in Teaching and Learning Conference. Fairfax, VA. September 2024.
+    \item Tadesse KB, Sikdar S, \textbf{Acuña SA}. Fascial gliding assessment for myofascial pain syndrome yields consistent upper trapezius activation. Poster presentation at the American Society of Biomechanics annual meeting. Madison, WI. August 2024.
+    \item Lamarre MA, King EL, Gibson G, \textbf{Acuña SA}, Sikdar S, Chitnis PV. Markerless motion capture can assess symmetry of knee range of motion during rehabilitation for ACL reconstruction. Poster presentation at the American Society of Biomechanics annual meeting. Madison, WI. August 2024.
+    \item Gibson G, King EL, Lamarre MA, \textbf{Acuña SA}, Sikdar S, Chitnis PV. Monitoring limb symmetry after ACL injury using insole force sensors. Poster presentation at the American Society of Biomechanics annual meeting. Madison, WI. August 2024. 
+    \item \textbf{Acuña SA}. Should you offer a course on how to be a scientist and a successful graduate student? Poster presentation at the American Society of Biomechanics annual meeting. Madison, WI. August 2024.
+    \item Abdulrazzaq R, Al Shawi H, King P, Popal M, Manns S, Amouzou IPE, Lee S, Lybarger KJ, \textbf{Acuña SA}. Capturing Lived Experiences of Chronic Pain through a Listening Experience Model. Poster presentation at the OSCAR (Office of Student Scholarship, Creative Activities, and Research) Celebration of Student Scholarship and Impact. Fairfax, VA. August 2024.
+    \item Taghizadeh Z, Bashatah A, Rima AH, Aher AS, \textbf{Acuña SA}, Sikdar S. Evaluation of proportional position control using a wearable ultrasound system. Podium presentation at the 46th Annual International Conference of the IEEE Engineering in Medicine \& Biology Society. Orlanda, FL. July 2024.
+    \item \textbf{Acuña SA}, Peixoto N, Matto HC, Seshaiyer P, Sikdar S. Addressing societal challenges through graduate-level community-engaged design projects. Podium presentation at the Access to Research and Inclusive Excellence (ARIE) National Conference. Fairfax, VA. March 2024.
     \item \textbf{Acuña SA}, Taghizadeh Z, Jirsaraei MJ, Bashatah A, Sikdar S. A wearable M-mode ultrasound system that can reliably control a prosthetic hand. Poster presentation at the annual meeting of the Society for Neuroscience. Washington, DC. November 2023.
     \item \textbf{Acuña SA}, Peixoto N, Matto HC, Seshaiyer P, Sikdar S. Addressing societal challenges through graduate-level community-engaged design projects. Podium presentation at the Biomedical Engineering Society annual conference. Seattle, WA. October 2023.
     \item \textbf{Acuña SA}, Bashatah A, Sikdar S. How to implement wearable ultrasound for prosthetic hand control. Poster presentation at the Biomedical Engineering Society annual conference. Seattle, WA. October 2023.
     \item Taghizadeh Z, Bashatah A, \textbf{Acuña SA}, Sikdar S. Wearable ultrasound system for controlling upper limb prosthetics. Podium presentation at the National Assembly of the American Orthotic \& Prosthetic Association. Indianapolis, IN. September 2023.
     \item \textbf{Acuña SA}, Bashatah A, Sikdar S. How to implement wearable ultrasound for prosthetic hand control. Poster presentation at the American Society of Biomechanics annual meeting. Knoxville, TN. August 2023.
-     \item \textbf{Acuña SA}, Krotine M, Gibson G, Boser Q, Hebert J, Sikdar S. Reproducibility of gaze and movement assessment of upper limb function. Poster presentation at the American Society of Biomechanics annual meeting. Knoxville, TN. August 2023.
+    \item \textbf{Acuña SA}, Krotine M, Gibson G, Boser Q, Hebert J, Sikdar S. Reproducibility of gaze and movement assessment of upper limb function. Poster presentation at the American Society of Biomechanics annual meeting. Knoxville, TN. August 2023.
     \item \textbf{Acuña SA}, Bashatah A, Sikdar S. How to implement wearable ultrasound for prosthetic hand control. Podium presentation at the east coast regional conference for the American Society of Biomechanics. Reading, PA. April 2023.
-     \item \textbf{Acuña SA}, Krotine M, Gibson G, Boser Q, Hebert J, Sikdar S. Reproducibility of gaze and movement assessment of upper limb function. Poster presentation at the east coast regional conference for the American Society of Biomechanics. Reading, PA. April 2023.
+    \item \textbf{Acuña SA}, Krotine M, Gibson G, Boser Q, Hebert J, Sikdar S. Reproducibility of gaze and movement assessment of upper limb function. Poster presentation at the east coast regional conference for the American Society of Biomechanics. Reading, PA. April 2023.
     \item \textbf{Acuña SA}, Bashatah A, Sutherland RF, Kaliki RR, Sikdar S. A wearable ultrasound system for controlling an upper-limb prosthesis. Podium presentation at the 49th Academy Annual Meeting \& Scientiﬁc Symposium of the American Academy of Orthotists \& Prosthetists. Nashville, TN. March 2023. [\href{https://journals.lww.com/jpojournal/Citation/2023/04001/UPPER_LIMB_PROSTHESES.10.aspx}{Link}]
     \item Patwardhan S, \textbf{Acuña SA}*, Engdhal SM, Mukherjee B, Gladhill KA, Bashata A, Dhawan AS, Abreu R, Schofield JS, Joiner WM,  Sikdar S. Comparison of virtual end-point trajectories using sonomyography with trajectories derived from coordinated multi-joint movements. Poster presentation at the Military Health System Research Symposium. Kissimmee, FL. September 2022. (*Acuña was added after submission as the presenting author.)
     \item \textbf{Acuña, SA}*, Labbé DR, Dingwell JB, Jenkins E. Using Virtual Reality for Physical Rehabilitation. Symposium presentation at the North American Congress on Biomechanics. Ottawa, ON. August 2022. (*Acuña organized and chaired the symposium.)
@@ -310,17 +354,30 @@ The Boeing Company, Airborne Early Warning \& Control %, Kent, WA, Airborne Earl
 
 \subsection{Current:}
 \begin{itemize}
-    \item[] Summer Team Impact Project (STIP) Grant \hfill 2024\\
-    George Mason University Office of Undergraduate Education\\
-    "Recording the lived experiences of patients with chronic pain from minoritized and underserved communities"\\
+    \item[] R25EB029381  \hfill 2020 -- 2026\\
+    National Institute of Biomedical Imaging and Bioengineering\\
+    Team-Based Design in Biomedical Engineering Education\\
+    "Clinical Immersion with Health Professionals and Industry Advising in Undergraduate Biomedical Engineering Capstone Design"\\
     Role: Principal Investigator\\
-    Amount: \$52,321\\
+    Amount: \$198,000\\
+    
+    \item[] Summer Team Impact Project (STIP) Grant \hfill 2025\\
+    George Mason University Office of Undergraduate Education\\
+    "Using Natural Language Processing to identify the biopsychosocial factors underlying chronic pain"\\
+    Role: Principal Investigator\\
+    Amount: \$55,380\\
     
 \end{itemize}
 
 
 \subsection{Completed:}
 \begin{itemize}
+    \item[] Summer Team Impact Project (STIP) Grant \hfill 2024\\
+    George Mason University Office of Undergraduate Education\\
+    "Recording the lived experiences of patients with chronic pain from minoritized and underserved communities"\\
+    Role: Principal Investigator\\
+    Amount: \$52,321\\
+
     \item[] R01HD092697-01S1 (PI: Thelen DG) \hfill 2018 -- 2019\\ % 03/2018 -- 12/2019
     NIH Eunice Kennedy Schriver National Institute of Child Health \& Human Development\\
     Research Supplement to Promote Diversity in Health-Related Research\\
@@ -344,6 +401,7 @@ The Boeing Company, Airborne Early Warning \& Control %, Kent, WA, Airborne Earl
 \section{Honors \& Awards}
 
 \begin{compactitem}
+     \item Faculty Appreciation Recognition, Faculty and Staff Engagement \& University Career Services, George Mason University. April 2024.
      \item Finalist, International "Rethink EMG" Competition. Delsys Inc. March 2022.
 	\item Best paper award (with Engdahl SM). Trent International Prosthetics Symposium. March 2022.
 	\item Finalist, Graduate Student Rapid Poster Award Competition, International Society of Biomechanics. August 2019.
@@ -371,7 +429,14 @@ The Boeing Company, Airborne Early Warning \& Control %, Kent, WA, Airborne Earl
 \section{Professional Organizations}
 
 \begin{compactitem} %\begin{compacthang}
-     \item Member, Center for Adaptive Systems of Brain-Body Interactions, George Mason University % since 2021
+     \item Core Investigator, Center for Advancing Systems Science and Bioengineering Innovation % since 2021
+     \begin{compactitem}
+	     \begin{footnotesize}
+     	     \item[] Formerly known as the \textit{Center for Adaptive Systems of Brain-Body Interactions.}
+	     \end{footnotesize}
+     \end{compactitem}
+     \item Fellow, NINDS BRAINS (Broadening the Representation of Academic Investigators in NeuroScience). %since 2024
+     \item Member, Career Influencers Network, George Mason University
      \item Member, American Society of Biomechanics % since 2015
      \item Member, Biomedical Engineering Society % since 2023
      \item Member, American Society for Engineering Education %since 2024
@@ -419,7 +484,10 @@ The Boeing Company, Airborne Early Warning \& Control %, Kent, WA, Airborne Earl
 
 \subsection{Grant Review:}
 \begin{compactitem} % \begin{hanginglist}
-    \item National Science Foundation reviewer (2023, 2024) % they request not to list GRFP on the CV. Graduate Research Fellowship Program (GRFP), NRT program
+    \item National Science Foundation reviewer (2023, 2024, 2025) % they request not to list deailts on the CV. 
+         % Graduate Research Fellowship Program (GRFP), 2023, 2024
+         % NRT program 2024
+         % NSF DARE panel 2025
     \item Special Projects in Rehabilitation Excellence( SPiRE), Veterans Health Administration Office of Research and Development
     \item American Orthotic \& Prosthetic Association (AOPA), Center for Orthotic \& Prosthetic Learning and Outcomes/Evidence-Based Practice (COPL)
 \end{compactitem} %\end{hanginglist}
@@ -429,10 +497,11 @@ The Boeing Company, Airborne Early Warning \& Control %, Kent, WA, Airborne Earl
      \item Committee member, East coast regional conference, American Society of Biomechanics. 2023.
 \end{compactenum} % \end{hanginglist}
 
-\subsection{Organized Conference Symposiums:}
+\subsection{Organized Conference Symposiums: (\textit{i.e., as conference chair})}
 \begin{compactenum} % \begin{hanginglist}
      \item Assistive technology. East coast regional conference, American Society of Biomechanics. Reading, PA. April 2023.
      \item Using Virtual Reality for Physical Rehabilitation. North American Congress on Biomechanics. Ottawa, ON. August 2022.
+     \item Integrating patients’ lived experiences into your biomechanics research. American Society of Biomechanics. Pittsburgh, PA. August 2025. (\textit{Submitted.})
 \end{compactenum} %\end{hanginglist}
 
 \subsection{Organized Conference Workshops:}
@@ -473,19 +542,18 @@ The Boeing Company, Airborne Early Warning \& Control %, Kent, WA, Airborne Earl
 \subsection{Instructor:}
 
 \begin{compactitem}
-     \item \textbf{BENG 375/575} (Intellectual Property, Regulatory Concepts, and Product Development), George Mason University. \textit{Sp 2024, F 2022.}
-     \item \textbf{BENG 492} (Senior Advanced Engineering Design Projects 1), George Mason University. \textit{Sp 2024.}
-     \item \textbf{BENG 493} (Senior Advanced Engineering Design Projects 2), George Mason University. \textit{F 2024.}
-     \item \textbf{BENG 501} (Research Methods), George Mason University. \textit{F 2023, F 2022.}
-     \item \textbf{PROV 801} (Community-Engaged Interdisciplinary Methods), George Mason University. \textit{F 2023, Su 2023.}
-     \item \textbf{PROV 802} (Community-Engaged Interdisciplinary Methods), George Mason University. \textit{Sp 2024.}
+     \item \textbf{BENG 375/575} (Intellectual Property, Regulatory Concepts, and Product Development), George Mason University. \textit{Sp 2025, Sp 2024, F 2022.}
+     \item \textbf{BENG 492} (Senior Advanced Engineering Design Projects I), George Mason University. \textit{Sp 2024.}
+     \item \textbf{BENG 501} (Research Methods), George Mason University. \textit{F 2024, F 2023, F 2022.}
+     \item \textbf{BENG 799} (Master's Thesis), George Mason University. \textit{Sp 2025.}
+     \item \textbf{PROV 801/802 [BENG 699]} (Community-Engaged Interdisciplinary Methods I \& II), George Mason University. \textit{Sp 2025, F 2024, Sp 2024, F 2023, Su 2023.}
      \item \textbf{ME 549} (Product Design), University of Wisconsin--Madison. \textit{F 2018, F 2017, F 2016.}
      \item \textbf{Mechatronics \& Engineering} (Pre-College Enrichment Opportunity Program for Learning Excellence), University of Wisconsin--Madison. \textit{Su 2017.}
 \end{compactitem}
 
 \subsection{Faculty Advisor for Student Design Teams:}
 \begin{compactitem}
-     \item \textbf{BENG 492/493} (Senior Adv Engr Design), George Mason University. \textit{Sp 2024, F 2023, Sp 2023, F 2022, Sp 2022, F2021.}
+     \item \textbf{BENG 492/493} (Senior Adv Engr Design), George Mason University. \textit{Sp 2025, F 2024, Sp 2024, F 2023, Sp 2023, F 2022, Sp 2022, F2021.}
      \item \textbf{ME 443/444} (Mechanical Design), George Mason University. \textit{Sp 2022, F 2021.}
      \item \textbf{MECH 4382} (Senior Design), University of Texas at Dallas. \textit{Sp 2020.}
      \item \textbf{BME 201/301} (Biomedical Engineering Design), University of Wisconsin--Madison. \textit{Sp 2017.}
@@ -494,8 +562,10 @@ The Boeing Company, Airborne Early Warning \& Control %, Kent, WA, Airborne Earl
 
 \subsection{Guest Lectures:}
 \begin{compactitem}
-     \item \textbf{PROV 801/802} (Community-Engaged Interdisciplinary Methods), George Mason University. \textit{Sp 2023, F 2022, Su 2022, Sp 2022.}
-     \item \textbf{BENG 391} (Professional Development), George Mason University. \textit{F 2022, F 2021.}
+     \item \textbf{BENG 370} (Bioinstrumentation \& Devices I), George Mason University. \textit{F 2024.}
+     \item \textbf{BENG 391} (Professional Development), George Mason University. \textit{F 2024, F 2022, F 2021.}
+     \item \textbf{BENG 492/493} (Senior Advanced Engineering Design Projects I \& II), George Mason University. \textit{F 2024.}
+     \item \textbf{PROV 801/802} (Community-Engaged Interdisciplinary Methods I \& II), George Mason University. \textit{Sp 2023, F 2022, Su 2022, Sp 2022.}
      \item \textbf{MENG 330} (Machine Design), Gonzaga University. \textit{Sp 2022.}
      \item \textbf{KINES 910 }(Advanced Seminar in Health Sciences), University of Wisconsin--Milwaukee. \textit{Sp 2016.}
 \end{compactitem}
@@ -512,36 +582,39 @@ The Boeing Company, Airborne Early Warning \& Control %, Kent, WA, Airborne Earl
 \section{Mentoring Experience}
 
 \begin{itemize}
-	\begin{footnotesize}
-	\item[] \textit{Note: GMU = George Mason University; UVA = University of Virginia; UTD = University of Texas--Dallas; UTSW = University of Texas Southwestern Medical Center; UWM = University of Wisconsin--Madison.}
-	\end{footnotesize}
+	\item[] \textit{\footnotesize Note: GMU = George Mason University; UVA = University of Virginia; UTD = University of Texas--Dallas; UTSW = University of Texas Southwestern Medical Center; UWM = University of Wisconsin--Madison.}
 \end{itemize}
 
 \subsection{\textbf{Doctoral Students}} % perhaps put a note when they completed PhD? vs people who dropped out?
 \begin{compacthang}
+     \item Connor Delaney, (GMU) Bioengineering \hfill 2025 -- Present     
+     \item Bat Baasan, (GMU) Computational Social Science \hfill 2024 -- Present
      \item Hadeel Elyazori, (GMU) Information Sciences \& Technology \hfill 2024 -- Present
      \item Zahra Taghizadeh, (GMU) Bioengineering $^{b}$ \hfill 2022 -- Present
-	\item Matin Jahani Jirsaraei, (GMU) Civil Engineering $^{b}$ \hfill 2022 -- Present
+	\item Matin Jahani Jirsaraei, (GMU) Civil Engineering \hfill 2022 -- Present
 	\item Erica King, (GMU) Bioengineering \hfill 2021 -- Present
 	\item Joseph Majdi, (GMU) Bioengineering \hfill 2021 -- 2022
 	\item Tony Kim, (UTD/UTSW) Biomedical Engineering \hfill 2019 -- 2020
 	\item Luis Rodriguez, (UTD/UTSW) Biomedical Engineering \hfill 2019 -- 2020
      \begin{itemize}
-	     % \item[$^{a}$] \textit{Dissertation committee chair}
-	     \item[$^{b}$] \textit{Dissertation committee member}
+	     % \item[$^{a}$] \textit{\small Dissertation committee chair}
+	     \item[$^{b}$] \textit{\small Dissertation committee member}
      \end{itemize}	
 \end{compacthang}
 
 \subsection{\textbf{Master's Students}}
 \begin{compacthang}
+     \item Lara Nasrat, (GMU) Bioengineering $^{c}$ \hfill 2025 -- Present
      \item Brady Stinson-Smith, (GMU) Bioengineering $^{a}$ \hfill 2024 -- Present
      \item Morgan Lamarre, (GMU) Bioengineering $^{a}$ \hfill 2024 -- Present
 	\item Kirubel Tadesse, (GMU) Bioengineering \& Data Analytics \hfill 2024 -- Present
-     \item Anudeep Enosh Prasad Dasari, (GMU) Bioengineering $^{b}$ \hfill 2024 -- Present
-	\item Sresta Koduri, (GMU) Bioengineering \hfill 2022 -- Present
+     \item Abhishek Aher, (GMU) Bioengineering  $^{c}$ \hfill 2022 -- 2024
+     %\item Anudeep Enosh Prasad Dasari, (GMU) Bioengineering $^{b}$ \hfill 2024 -- Present
+	\item Sresta Koduri, (GMU) Bioengineering \hfill 2022 -- 2024
      \begin{itemize}
-	     \item[$^{a}$] \textit{Thesis committee chair}
-	     \item[$^{b}$] \textit{Thesis committee member}
+	     \item[$^{a}$] \textit{\small Thesis committee chair}
+	     \item[$^{b}$] \textit{\small Thesis committee member}
+    	     \item[$^{c}$] \textit{\small Practicum committee member}
      \end{itemize}	
 \end{compacthang}
 
@@ -553,13 +626,14 @@ The Boeing Company, Airborne Early Warning \& Control %, Kent, WA, Airborne Earl
 
 \subsection{\textbf{Undergraduate Students} (\textit{Research Mentorship})}
 \begin{compacthang}
-     \item Layan Wahdan, (GMU) Bioengineering \hfill 2024
-     \item Syleah Manns, (GMU) Bioengineering \hfill 2024
-     \item Isaac Amouzou, (GMU) Statistics \hfill 2024
-     \item Patrick King, (GMU) Kinesiology \hfill 2024
-     \item Hana Al Shawi, (GMU) Forensic Science \hfill 2024
-     \item Mahdia Popal, (GMU) Biology \hfill 2024
-     \item Rusul Abdulrazzaq, (GMU) Biology \hfill 2024
+     \item Thomas Rossi, (GMU) Bioengineering \hfill 2025 -- Present
+     \item Layan Wahdan, (GMU) Bioengineering $^{d}$ \hfill 2024
+     \item Syleah Manns, (GMU) Bioengineering $^{d}$ \hfill 2024
+     \item Isaac Amouzou, (GMU) Statistics $^{d}$ \hfill 2024
+     \item Patrick King, (GMU) Kinesiology $^{d}$ \hfill 2024
+     \item Hana Al Shawi, (GMU) Forensic Science $^{d}$ \hfill 2024
+     \item Mahdia Popal, (GMU) Biology $^{d}$ \hfill 2024
+     \item Rusul Abdulrazzaq, (GMU) Biology $^{d}$ \hfill 2024 -- Present
      \item Morgan Lamarre, (GMU) Bioengineering $^{d}$ \hfill 2022 -- 2024
 	\item Kirubel Tadesse, (GMU) Bioengineering $^{d}$ \hfill 2023 -- 2024
 	\item Nicolas Callejas, (GMU) Bioengineering \hfill 2023
@@ -572,15 +646,16 @@ The Boeing Company, Airborne Early Warning \& Control %, Kent, WA, Airborne Earl
 	\item Isaac Loegering, (UWM) Biomedical Engineering \hfill 2016
 	\item John Zunker, (UWM) Mechanical Engineering $^{c,d}$ \hfill 2015 -- 2018 
      \begin{itemize}
-	     \item[$^{c}$] \textit{Research resulted in authorship on peer-reviewed publication}
-	     \item[$^{d}$] \textit{Research resulted in authorship on peer-reviewed conference abstract}
+	     \item[$^{c}$] \textit{\small Research resulted in authorship on peer-reviewed publication}
+	     \item[$^{d}$] \textit{\small Research resulted in authorship on peer-reviewed conference abstract}
      \end{itemize}	
 \end{compacthang}
 
 \subsection{\textbf{High School Students} (\textit{Research Mentorship})}
 \begin{compacthang}
-     \item Charlie Holtman, The Potomac School \hfill 2024
+     \item Madina Said, John Champe High School \hfill 2024 -- Present
      \item Zaara Mulla, Freedom High School and the Academy of Engineering \& Technology \hfill 2024
+     \item Charlie Holtman, The Potomac School \hfill 2024
 \end{compacthang}
 
 
@@ -601,6 +676,7 @@ The Boeing Company, Airborne Early Warning \& Control %, Kent, WA, Airborne Earl
 
 \begin{compactenum}
      \item NINDS BRAINS fellow (Broadening the Representation of Academic Investigators in NeuroScience). 1-year faculty cohort. 2024.
+     \item Career Influencers network training. 1-day course. George Mason University. 2024.
 	\item Proposal Writing (ME 699). 15-week course. George Mason University. 2022.
 	\item Preparing Future Faculty Workshop. 4-week course. Auburn University. 2021.
 	\item Responsible Conduct of Research. 9-week course. UT Southwestern. 2020.
